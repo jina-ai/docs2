@@ -1,0 +1,54 @@
+name: CD
+# build happens when docs changes merge to devel-1.3/jina docstring get updated
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      release_reason:
+        description: 'Short reason for this manual release'
+        required: true
+
+jobs:
+  update-doc:
+    runs-on: ubuntu-latest
+    env:
+      HTML_DIR: ./_build/dirhtml
+    steps:
+      - name: Checkout to Jina core
+        uses: actions/checkout@v2
+        with:
+          repository: jina-ai/jina
+          ref: refs/tags/v2.6.4
+          token: ${{ secrets.JINA_DEV_BOT }}
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Get Jina version
+        run: |
+          pip install .  --no-cache-dir
+          JINA_VERSION=$(sed -n '/^__version__/p' ./jina/__init__.py | cut -d \' -f2)-master
+          echo "JINA_VERSION=${JINA_VERSION}" >> $GITHUB_ENV
+      - name: Checkout to docs repo
+        uses: actions/checkout@v2
+      - name: Build docs
+        run: |
+          bash .github/scripts/make-doc.sh commit "update ${{env.JINA_VERSION}} due to ${{github.event_name}} on ${{github.repository}}"
+      - name: Commit documentation changes to gh-pages
+        run: |
+          git clone https://github.com/jina-ai/docs2.git --branch gh-pages --single-branch gh-pages
+          cp -r _build/dirhtml/* gh-pages/
+          cd gh-pages
+          git config --local user.email "dev-bot@jina.ai"
+          git config --local user.name "Jina Dev Bot"
+          git add .
+          git commit -m "update ${{env.JINA_VERSION}} due to ${{github.event_name}} on ${{github.repository}}" -a || true
+      - name: Push changes to gh-pages
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          directory: gh-pages
+          github_token: ${{ secrets.JINA_DEV_BOT }}
+          force: true
