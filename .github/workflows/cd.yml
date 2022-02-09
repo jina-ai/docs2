@@ -23,24 +23,32 @@ jobs:
           ref: refs/tags/v2.6.4
           token: ${{ secrets.JINA_DOCS2_TOKEN }}
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: 3.7
       - name: Get Jina version
         run: |
-          pip install .  --no-cache-dir
+          pip install .[devel]  --no-cache-dir
           JINA_VERSION=$(sed -n '/^__version__/p' ./jina/__init__.py | cut -d \' -f2)-master
           echo "JINA_VERSION=${JINA_VERSION}" >> $GITHUB_ENV
       - name: Checkout to docs repo
         uses: actions/checkout@v2
       - name: Build docs
         run: |
-          bash .github/scripts/make-doc.sh commit "update ${{env.JINA_VERSION}} due to ${{github.event_name}} on ${{github.repository}}"
+          mkdir gen-html
+          cd docs
+          pip install -r requirements.txt
+          pip install furo==2021.10.9
+          export NUM_RELEASES=2
+          bash makedoc.sh local-only
+          ls -la
       - name: Commit documentation changes to gh-pages
         run: |
           git clone https://github.com/jina-ai/docs2.git --branch gh-pages --single-branch gh-pages
-          cp -r _build/dirhtml/* gh-pages/
+          cp -r _build/dirhtml/gen-html/* gh-pages/
+          ls -la
           cd gh-pages
+          touch .nojekyll
           git config --local user.email "dev-bot@jina.ai"
           git config --local user.name "Jina Dev Bot"
           git add .
