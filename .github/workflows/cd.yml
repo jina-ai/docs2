@@ -42,8 +42,9 @@ jobs:
       - name: Commit documentation changes to gh-pages
         run: |
           git clone https://github.com/jina-ai/docs2.git --branch gh-pages --single-branch gh-pages
-          cp -a _build/dirhtml/. gh-pages/
           ls -la
+          ls _build/dirhtml/
+          cp -a _build/dirhtml/. gh-pages/
           cd gh-pages
           touch .nojekyll
           git config --local user.email "dev-bot@jina.ai"
