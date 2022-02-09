@@ -43,8 +43,9 @@ jobs:
         run: |
           git clone https://github.com/jina-ai/docs2.git --branch gh-pages --single-branch gh-pages
           ls -la
-          ls _build/dirhtml/
-          cp -a _build/dirhtml/. gh-pages/
+          pwd
+          ls docs/_build/dirhtml/
+          cp -a docs/_build/dirhtml/. gh-pages/
           cd gh-pages
           touch .nojekyll
           git config --local user.email "dev-bot@jina.ai"
