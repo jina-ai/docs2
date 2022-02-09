@@ -21,7 +21,7 @@ jobs:
         with:
           repository: jina-ai/jina
           ref: refs/tags/v2.6.4
-          token: ${{ secrets.JINA_DEV_BOT }}
+          token: ${{ secrets.JINA_DOCS2_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
@@ -50,5 +50,5 @@ jobs:
         with:
           branch: gh-pages
           directory: gh-pages
-          github_token: ${{ secrets.JINA_DEV_BOT }}
+          github_token: ${{ secrets.JINA_DOCS2_TOKEN }}
           force: true
