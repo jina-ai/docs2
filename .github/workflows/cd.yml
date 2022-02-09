@@ -31,8 +31,6 @@ jobs:
           pip install .[devel]  --no-cache-dir
           JINA_VERSION=$(sed -n '/^__version__/p' ./jina/__init__.py | cut -d \' -f2)-master
           echo "JINA_VERSION=${JINA_VERSION}" >> $GITHUB_ENV
-      - name: Checkout to docs repo
-        uses: actions/checkout@v2
       - name: Build docs
         run: |
           cd docs
