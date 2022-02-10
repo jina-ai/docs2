@@ -38,13 +38,9 @@ jobs:
           pip install furo==2021.10.9
           export NUM_RELEASES=2
           bash makedoc.sh local-only
-          ls -la
       - name: Commit documentation changes to gh-pages
         run: |
           git clone https://github.com/jina-ai/docs2.git --branch gh-pages --single-branch gh-pages
-          ls -la
-          pwd
-          ls docs/_build/dirhtml/
           cp -a docs/_build/dirhtml/. gh-pages/
           cd gh-pages
           touch .nojekyll
