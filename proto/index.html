@@ -4,27 +4,34 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta property="og:title" content="Protocol Documentation" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://docs.jina.ai/proto/index.html" />
-  <meta property="og:site_name" content="Jina 2.6.4-master Documentation" />
-  <meta property="og:description" content="Table of Contents: docarray.proto- DenseNdArrayProto, DocumentArrayProto, DocumentProto, DocumentProto.EvaluationsEntry, DocumentProto.ScoresEntry, GraphProto, NamedScoreProto, NdArrayProto, SparseNdArrayProto., jina.proto- EnvelopeProto, EnvelopeProto.CompressConfigProto, EnvelopeProto.VersionPr..." />
-  <meta property="og:image" content="https://docs.jina.ai/_static/banner.png" />
-  <meta property="og:image:alt" content="Jina 2.6.4-master Documentation" />
-  <meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="Protocol Documentation" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://docs.jina.ai/proto/index/" />
+  
+<meta property="og:site_name" content="Jina 2.6.4-master Documentation" />
+  
+<meta property="og:description" content="Table of Contents: docarray.proto- DenseNdArrayProto, DocumentArrayProto, DocumentProto, DocumentProto.EvaluationsEntry, DocumentProto.ScoresEntry, GraphProto, NamedScoreProto, NdArrayProto, SparseNdArrayProto., jina.proto- EnvelopeProto, EnvelopeProto.CompressConfigProto, EnvelopeProto.VersionPr..." />
+  
+<meta property="og:image" content="https://docs.jina.ai/_static/banner.png" />
+  
+<meta property="og:image:alt" content="Jina 2.6.4-master Documentation" />
+  
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@JinaAI_">
 <meta name="twitter:creator" content="@JinaAI_">
 <meta name="description" content="Jina is the cloud-native neural search solution powered by the state-of-the-art AI and deep learning">
 <meta property="og:description" content="Jina is the cloud-native neural search solution powered by the state-of-the-art AI and deep learning">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-48ZDWC8GT6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164627626-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-48ZDWC8GT6');
+  gtag('config', 'UA-164627626-3');
 </script>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -782,50 +789,50 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="#docarray.proto">docarray.proto</a></p>
+<li><p><a class="reference external" href="#docarray-proto">docarray.proto</a></p>
 <ul>
-<li><p><a class="reference external" href="#docarray.DenseNdArrayProto">DenseNdArrayProto</a></p></li>
-<li><p><a class="reference external" href="#docarray.DocumentArrayProto">DocumentArrayProto</a></p></li>
-<li><p><a class="reference external" href="#docarray.DocumentProto">DocumentProto</a></p></li>
-<li><p><a class="reference external" href="#docarray.DocumentProto.EvaluationsEntry">DocumentProto.EvaluationsEntry</a></p></li>
-<li><p><a class="reference external" href="#docarray.DocumentProto.ScoresEntry">DocumentProto.ScoresEntry</a></p></li>
-<li><p><a class="reference external" href="#docarray.GraphProto">GraphProto</a></p></li>
-<li><p><a class="reference external" href="#docarray.NamedScoreProto">NamedScoreProto</a></p></li>
-<li><p><a class="reference external" href="#docarray.NdArrayProto">NdArrayProto</a></p></li>
-<li><p><a class="reference external" href="#docarray.SparseNdArrayProto">SparseNdArrayProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-DenseNdArrayProto">DenseNdArrayProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-DocumentArrayProto">DocumentArrayProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-DocumentProto">DocumentProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-DocumentProto-EvaluationsEntry">DocumentProto.EvaluationsEntry</a></p></li>
+<li><p><a class="reference external" href="#docarray-DocumentProto-ScoresEntry">DocumentProto.ScoresEntry</a></p></li>
+<li><p><a class="reference external" href="#docarray-GraphProto">GraphProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-NamedScoreProto">NamedScoreProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-NdArrayProto">NdArrayProto</a></p></li>
+<li><p><a class="reference external" href="#docarray-SparseNdArrayProto">SparseNdArrayProto</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="#jina.proto">jina.proto</a></p>
+<li><p><a class="reference external" href="#jina-proto">jina.proto</a></p>
 <ul>
-<li><p><a class="reference external" href="#jina.EnvelopeProto">EnvelopeProto</a></p></li>
-<li><p><a class="reference external" href="#jina.EnvelopeProto.CompressConfigProto">EnvelopeProto.CompressConfigProto</a></p></li>
-<li><p><a class="reference external" href="#jina.EnvelopeProto.VersionProto">EnvelopeProto.VersionProto</a></p></li>
-<li><p><a class="reference external" href="#jina.HeaderProto">HeaderProto</a></p></li>
-<li><p><a class="reference external" href="#jina.MessageProto">MessageProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RequestProto">RequestProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RequestProto.ControlRequestProto">RequestProto.ControlRequestProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RequestProto.DataRequestProto">RequestProto.DataRequestProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RouteProto">RouteProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RoutingEdgeProto">RoutingEdgeProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RoutingTableProto">RoutingTableProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RoutingTableProto.PodsEntry">RoutingTableProto.PodsEntry</a></p></li>
-<li><p><a class="reference external" href="#jina.StatusProto">StatusProto</a></p></li>
-<li><p><a class="reference external" href="#jina.StatusProto.ExceptionProto">StatusProto.ExceptionProto</a></p></li>
-<li><p><a class="reference external" href="#jina.TargetPodProto">TargetPodProto</a></p></li>
-<li><p><a class="reference external" href="#jina.RequestProto.ControlRequestProto.Command">RequestProto.ControlRequestProto.Command</a></p></li>
-<li><p><a class="reference external" href="#jina.StatusProto.StatusCode">StatusProto.StatusCode</a></p></li>
-<li><p><a class="reference external" href="#jina.JinaDataRequestRPC">JinaDataRequestRPC</a></p></li>
-<li><p><a class="reference external" href="#jina.JinaRPC">JinaRPC</a></p></li>
+<li><p><a class="reference external" href="#jina-EnvelopeProto">EnvelopeProto</a></p></li>
+<li><p><a class="reference external" href="#jina-EnvelopeProto-CompressConfigProto">EnvelopeProto.CompressConfigProto</a></p></li>
+<li><p><a class="reference external" href="#jina-EnvelopeProto-VersionProto">EnvelopeProto.VersionProto</a></p></li>
+<li><p><a class="reference external" href="#jina-HeaderProto">HeaderProto</a></p></li>
+<li><p><a class="reference external" href="#jina-MessageProto">MessageProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RequestProto">RequestProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RequestProto-ControlRequestProto">RequestProto.ControlRequestProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RequestProto-DataRequestProto">RequestProto.DataRequestProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RouteProto">RouteProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RoutingEdgeProto">RoutingEdgeProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RoutingTableProto">RoutingTableProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RoutingTableProto-PodsEntry">RoutingTableProto.PodsEntry</a></p></li>
+<li><p><a class="reference external" href="#jina-StatusProto">StatusProto</a></p></li>
+<li><p><a class="reference external" href="#jina-StatusProto-ExceptionProto">StatusProto.ExceptionProto</a></p></li>
+<li><p><a class="reference external" href="#jina-TargetPodProto">TargetPodProto</a></p></li>
+<li><p><a class="reference external" href="#jina-RequestProto-ControlRequestProto-Command">RequestProto.ControlRequestProto.Command</a></p></li>
+<li><p><a class="reference external" href="#jina-StatusProto-StatusCode">StatusProto.StatusCode</a></p></li>
+<li><p><a class="reference external" href="#jina-JinaDataRequestRPC">JinaDataRequestRPC</a></p></li>
+<li><p><a class="reference external" href="#jina-JinaRPC">JinaRPC</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="#scalar-value-types">Scalar Value Types</a></p></li>
 </ul>
-<p><a name="docarray.proto"></a></p>
+<p><a name="docarray-proto"></a></p>
 <p align="right"><a href="#top">Top</a></p>
 </section>
 <section id="docarray-proto">
 <h2>docarray.proto<a class="headerlink" href="#docarray-proto" title="Permalink to this headline">¶</a></h2>
-<p><a name="docarray.DenseNdArrayProto"></a></p>
+<p><a name="docarray-DenseNdArrayProto"></a></p>
 <section id="densendarrayproto">
 <h3>DenseNdArrayProto<a class="headerlink" href="#densendarrayproto" title="Permalink to this headline">¶</a></h3>
 <p>Represents a (quantized) dense n-dim array</p>
@@ -855,7 +862,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.DocumentArrayProto"></a></p>
+<p><a name="docarray-DocumentArrayProto"></a></p>
 </section>
 <section id="documentarrayproto">
 <h3>DocumentArrayProto<a class="headerlink" href="#documentarrayproto" title="Permalink to this headline">¶</a></h3>
@@ -869,13 +876,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>docs</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto">DocumentProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto">DocumentProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>a list of Documents</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.DocumentProto"></a></p>
+<p><a name="docarray-DocumentProto"></a></p>
 </section>
 <section id="documentproto">
 <h3>DocumentProto<a class="headerlink" href="#documentproto" title="Permalink to this headline">¶</a></h3>
@@ -915,7 +922,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the raw binary content of this document, which often represents the original document when comes into jina</p></td>
 </tr>
 <tr class="row-odd"><td><p>blob</p></td>
-<td><p><a class="reference external" href="#docarray.NdArrayProto">NdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-NdArrayProto">NdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>the ndarray of the image/audio/video document</p></td>
 </tr>
@@ -925,7 +932,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>a text document</p></td>
 </tr>
 <tr class="row-odd"><td><p>chunks</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto">DocumentProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto">DocumentProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>list of the sub-documents of this document (recursive structure)</p></td>
 </tr>
@@ -935,7 +942,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>The weight of this document</p></td>
 </tr>
 <tr class="row-odd"><td><p>matches</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto">DocumentProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto">DocumentProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>the matched documents on the same level (recursive structure)</p></td>
 </tr>
@@ -950,7 +957,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>mime type of this document, for buffer content, this is required; for other contents, this can be guessed</p></td>
 </tr>
 <tr class="row-even"><td><p>tags</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Struct">google.protobuf.Struct</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Struct">google.protobuf.Struct</a></p></td>
 <td><p></p></td>
 <td><p>a structured data value, consisting of field which map to dynamically typed values.</p></td>
 </tr>
@@ -965,12 +972,12 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the offset of this doc in the previous granularity document</p></td>
 </tr>
 <tr class="row-odd"><td><p>embedding</p></td>
-<td><p><a class="reference external" href="#docarray.NdArrayProto">NdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-NdArrayProto">NdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>the embedding <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> of this document</p></td>
 </tr>
 <tr class="row-even"><td><p>scores</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto.ScoresEntry">DocumentProto.ScoresEntry</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto-ScoresEntry">DocumentProto.ScoresEntry</a></p></td>
 <td><p>repeated</p></td>
 <td><p>Scores performed on the document, each element corresponds to a metric</p></td>
 </tr>
@@ -980,13 +987,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>modality, an identifier to the modality this document belongs to. In the scope of multi/cross modal search</p></td>
 </tr>
 <tr class="row-even"><td><p>evaluations</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto.EvaluationsEntry">DocumentProto.EvaluationsEntry</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto-EvaluationsEntry">DocumentProto.EvaluationsEntry</a></p></td>
 <td><p>repeated</p></td>
 <td><p>Evaluations performed on the document, each element corresponds to a metric</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.DocumentProto.EvaluationsEntry"></a></p>
+<p><a name="docarray-DocumentProto-EvaluationsEntry"></a></p>
 </section>
 <section id="documentproto-evaluationsentry">
 <h3>DocumentProto.EvaluationsEntry<a class="headerlink" href="#documentproto-evaluationsentry" title="Permalink to this headline">¶</a></h3>
@@ -1005,13 +1012,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p>value</p></td>
-<td><p><a class="reference external" href="#docarray.NamedScoreProto">NamedScoreProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-NamedScoreProto">NamedScoreProto</a></p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.DocumentProto.ScoresEntry"></a></p>
+<p><a name="docarray-DocumentProto-ScoresEntry"></a></p>
 </section>
 <section id="documentproto-scoresentry">
 <h3>DocumentProto.ScoresEntry<a class="headerlink" href="#documentproto-scoresentry" title="Permalink to this headline">¶</a></h3>
@@ -1030,13 +1037,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p>value</p></td>
-<td><p><a class="reference external" href="#docarray.NamedScoreProto">NamedScoreProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-NamedScoreProto">NamedScoreProto</a></p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.GraphProto"></a></p>
+<p><a name="docarray-GraphProto"></a></p>
 </section>
 <section id="graphproto">
 <h3>GraphProto<a class="headerlink" href="#graphproto" title="Permalink to this headline">¶</a></h3>
@@ -1051,12 +1058,12 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>adjacency</p></td>
-<td><p><a class="reference external" href="#docarray.NdArrayProto">NdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-NdArrayProto">NdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>adjacency list</p></td>
 </tr>
 <tr class="row-odd"><td><p>edge_features</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Struct">google.protobuf.Struct</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Struct">google.protobuf.Struct</a></p></td>
 <td><p></p></td>
 <td><p>Container structure to store edge features</p></td>
 </tr>
@@ -1067,7 +1074,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.NamedScoreProto"></a></p>
+<p><a name="docarray-NamedScoreProto"></a></p>
 </section>
 <section id="namedscoreproto">
 <h3>NamedScoreProto<a class="headerlink" href="#namedscoreproto" title="Permalink to this headline">¶</a></h3>
@@ -1097,7 +1104,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>text description of the score</p></td>
 </tr>
 <tr class="row-odd"><td><p>operands</p></td>
-<td><p><a class="reference external" href="#docarray.NamedScoreProto">NamedScoreProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-NamedScoreProto">NamedScoreProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>the score can be nested</p></td>
 </tr>
@@ -1108,7 +1115,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.NdArrayProto"></a></p>
+<p><a name="docarray-NdArrayProto"></a></p>
 </section>
 <section id="ndarrayproto">
 <h3>NdArrayProto<a class="headerlink" href="#ndarrayproto" title="Permalink to this headline">¶</a></h3>
@@ -1123,12 +1130,12 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>dense</p></td>
-<td><p><a class="reference external" href="#docarray.DenseNdArrayProto">DenseNdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DenseNdArrayProto">DenseNdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>dense representation of the ndarray</p></td>
 </tr>
 <tr class="row-odd"><td><p>sparse</p></td>
-<td><p><a class="reference external" href="#docarray.SparseNdArrayProto">SparseNdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-SparseNdArrayProto">SparseNdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>sparse representation of the ndarray</p></td>
 </tr>
@@ -1138,13 +1145,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the name of the ndarray class</p></td>
 </tr>
 <tr class="row-odd"><td><p>parameters</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Struct">google.protobuf.Struct</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Struct">google.protobuf.Struct</a></p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="docarray.SparseNdArrayProto"></a></p>
+<p><a name="docarray-SparseNdArrayProto"></a></p>
 </section>
 <section id="sparsendarrayproto">
 <h3>SparseNdArrayProto<a class="headerlink" href="#sparsendarrayproto" title="Permalink to this headline">¶</a></h3>
@@ -1159,12 +1166,12 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>indices</p></td>
-<td><p><a class="reference external" href="#docarray.DenseNdArrayProto">DenseNdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DenseNdArrayProto">DenseNdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>A 2-D int64 tensor of shape [N, ndims], which specifies the indices of the elements in the sparse tensor that contain nonzero values (elements are zero-indexed)</p></td>
 </tr>
 <tr class="row-odd"><td><p>values</p></td>
-<td><p><a class="reference external" href="#docarray.DenseNdArrayProto">DenseNdArrayProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DenseNdArrayProto">DenseNdArrayProto</a></p></td>
 <td><p></p></td>
 <td><p>A 1-D tensor of any type and shape [N], which supplies the values for each element in indices.</p></td>
 </tr>
@@ -1175,13 +1182,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.proto"></a></p>
+<p><a name="jina-proto"></a></p>
 <p align="right"><a href="#top">Top</a></p>
 </section>
 </section>
 <section id="jina-proto">
 <h2>jina.proto<a class="headerlink" href="#jina-proto" title="Permalink to this headline">¶</a></h2>
-<p><a name="jina.EnvelopeProto"></a></p>
+<p><a name="jina-EnvelopeProto"></a></p>
 <section id="envelopeproto">
 <h3>EnvelopeProto<a class="headerlink" href="#envelopeproto" title="Permalink to this headline">¶</a></h3>
 <p>Represents a Envelope, a part of the <code class="docutils literal notranslate"><span class="pre">Message</span></code>.</p>
@@ -1215,7 +1222,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>timeout in second until this message is dropped</p></td>
 </tr>
 <tr class="row-even"><td><p>version</p></td>
-<td><p><a class="reference external" href="#jina.EnvelopeProto.VersionProto">EnvelopeProto.VersionProto</a></p></td>
+<td><p><a class="reference external" href="#jina-EnvelopeProto-VersionProto">EnvelopeProto.VersionProto</a></p></td>
 <td><p></p></td>
 <td><p>version info</p></td>
 </tr>
@@ -1230,33 +1237,33 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>check local Protobuf version on every Pod that this message flows to</p></td>
 </tr>
 <tr class="row-odd"><td><p>compression</p></td>
-<td><p><a class="reference external" href="#jina.EnvelopeProto.CompressConfigProto">EnvelopeProto.CompressConfigProto</a></p></td>
+<td><p><a class="reference external" href="#jina-EnvelopeProto-CompressConfigProto">EnvelopeProto.CompressConfigProto</a></p></td>
 <td><p></p></td>
 <td><p>compress configuration used for request</p></td>
 </tr>
 <tr class="row-even"><td><p>routes</p></td>
-<td><p><a class="reference external" href="#jina.RouteProto">RouteProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RouteProto">RouteProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>status info on every routes</p></td>
 </tr>
 <tr class="row-odd"><td><p>routing_table</p></td>
-<td><p><a class="reference external" href="#jina.RoutingTableProto">RoutingTableProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RoutingTableProto">RoutingTableProto</a></p></td>
 <td><p></p></td>
 <td><p>the routing table contains information to the next pods</p></td>
 </tr>
 <tr class="row-even"><td><p>status</p></td>
-<td><p><a class="reference external" href="#jina.StatusProto">StatusProto</a></p></td>
+<td><p><a class="reference external" href="#jina-StatusProto">StatusProto</a></p></td>
 <td><p></p></td>
 <td><p>status info</p></td>
 </tr>
 <tr class="row-odd"><td><p>header</p></td>
-<td><p><a class="reference external" href="#jina.HeaderProto">HeaderProto</a></p></td>
+<td><p><a class="reference external" href="#jina-HeaderProto">HeaderProto</a></p></td>
 <td><p></p></td>
 <td><p>header contains meta info defined by the user, copied from Request, for lazy serialization</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.EnvelopeProto.CompressConfigProto"></a></p>
+<p><a name="jina-EnvelopeProto-CompressConfigProto"></a></p>
 </section>
 <section id="envelopeproto-compressconfigproto">
 <h3>EnvelopeProto.CompressConfigProto<a class="headerlink" href="#envelopeproto-compressconfigproto" title="Permalink to this headline">¶</a></h3>
@@ -1286,13 +1293,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the low watermark that enables the sending of a compressed message. compression rate (after_size/before_size) lower than this LWM will be considered as successeful compression, and will be sent. Otherwise, it will send the original message without compression</p></td>
 </tr>
 <tr class="row-odd"><td><p>parameters</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Struct">google.protobuf.Struct</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Struct">google.protobuf.Struct</a></p></td>
 <td><p></p></td>
 <td><p>other parameters that can be accepted by the algorithm</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.EnvelopeProto.VersionProto"></a></p>
+<p><a name="jina-EnvelopeProto-VersionProto"></a></p>
 </section>
 <section id="envelopeproto-versionproto">
 <h3>EnvelopeProto.VersionProto<a class="headerlink" href="#envelopeproto-versionproto" title="Permalink to this headline">¶</a></h3>
@@ -1323,7 +1330,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.HeaderProto"></a></p>
+<p><a name="jina-HeaderProto"></a></p>
 </section>
 <section id="headerproto">
 <h3>HeaderProto<a class="headerlink" href="#headerproto" title="Permalink to this headline">¶</a></h3>
@@ -1360,7 +1367,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.MessageProto"></a></p>
+<p><a name="jina-MessageProto"></a></p>
 </section>
 <section id="messageproto">
 <h3>MessageProto<a class="headerlink" href="#messageproto" title="Permalink to this headline">¶</a></h3>
@@ -1375,18 +1382,18 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>envelope</p></td>
-<td><p><a class="reference external" href="#jina.EnvelopeProto">EnvelopeProto</a></p></td>
+<td><p><a class="reference external" href="#jina-EnvelopeProto">EnvelopeProto</a></p></td>
 <td><p></p></td>
 <td><p>the envelope of the message, used internally in jina, dropped when returning to client</p></td>
 </tr>
 <tr class="row-odd"><td><p>request</p></td>
-<td><p><a class="reference external" href="#jina.RequestProto">RequestProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RequestProto">RequestProto</a></p></td>
 <td><p></p></td>
 <td><p>the request body</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RequestProto"></a></p>
+<p><a name="jina-RequestProto"></a></p>
 </section>
 <section id="requestproto">
 <h3>RequestProto<a class="headerlink" href="#requestproto" title="Permalink to this headline">¶</a></h3>
@@ -1406,38 +1413,38 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the unique ID of this request. Multiple requests with the same ID will be gathered</p></td>
 </tr>
 <tr class="row-odd"><td><p>control</p></td>
-<td><p><a class="reference external" href="#jina.RequestProto.ControlRequestProto">RequestProto.ControlRequestProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RequestProto-ControlRequestProto">RequestProto.ControlRequestProto</a></p></td>
 <td><p></p></td>
 <td><p>a control request</p></td>
 </tr>
 <tr class="row-even"><td><p>data</p></td>
-<td><p><a class="reference external" href="#jina.RequestProto.DataRequestProto">RequestProto.DataRequestProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RequestProto-DataRequestProto">RequestProto.DataRequestProto</a></p></td>
 <td><p></p></td>
 <td><p>a data request</p></td>
 </tr>
 <tr class="row-odd"><td><p>header</p></td>
-<td><p><a class="reference external" href="#jina.HeaderProto">HeaderProto</a></p></td>
+<td><p><a class="reference external" href="#jina-HeaderProto">HeaderProto</a></p></td>
 <td><p></p></td>
 <td><p>header contains meta info defined by the user</p></td>
 </tr>
 <tr class="row-even"><td><p>parameters</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Struct">google.protobuf.Struct</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Struct">google.protobuf.Struct</a></p></td>
 <td><p></p></td>
 <td><p>extra kwargs that will be used in executor</p></td>
 </tr>
 <tr class="row-odd"><td><p>routes</p></td>
-<td><p><a class="reference external" href="#jina.RouteProto">RouteProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RouteProto">RouteProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>status info on every routes</p></td>
 </tr>
 <tr class="row-even"><td><p>status</p></td>
-<td><p><a class="reference external" href="#jina.StatusProto">StatusProto</a></p></td>
+<td><p><a class="reference external" href="#jina-StatusProto">StatusProto</a></p></td>
 <td><p></p></td>
 <td><p>status info</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RequestProto.ControlRequestProto"></a></p>
+<p><a name="jina-RequestProto-ControlRequestProto"></a></p>
 </section>
 <section id="requestproto-controlrequestproto">
 <h3>RequestProto.ControlRequestProto<a class="headerlink" href="#requestproto-controlrequestproto" title="Permalink to this headline">¶</a></h3>
@@ -1452,13 +1459,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>command</p></td>
-<td><p><a class="reference external" href="#jina.RequestProto.ControlRequestProto.Command">RequestProto.ControlRequestProto.Command</a></p></td>
+<td><p><a class="reference external" href="#jina-RequestProto-ControlRequestProto-Command">RequestProto.ControlRequestProto.Command</a></p></td>
 <td><p></p></td>
 <td><p>the control command</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RequestProto.DataRequestProto"></a></p>
+<p><a name="jina-RequestProto-DataRequestProto"></a></p>
 </section>
 <section id="requestproto-datarequestproto">
 <h3>RequestProto.DataRequestProto<a class="headerlink" href="#requestproto-datarequestproto" title="Permalink to this headline">¶</a></h3>
@@ -1473,18 +1480,18 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>docs</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto">docarray.DocumentProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto">docarray.DocumentProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>a list of Documents to query</p></td>
 </tr>
 <tr class="row-odd"><td><p>groundtruths</p></td>
-<td><p><a class="reference external" href="#docarray.DocumentProto">docarray.DocumentProto</a></p></td>
+<td><p><a class="reference external" href="#docarray-DocumentProto">docarray.DocumentProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>a list of groundtruth Document you want to evaluate it with</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RouteProto"></a></p>
+<p><a name="jina-RouteProto"></a></p>
 </section>
 <section id="routeproto">
 <h3>RouteProto<a class="headerlink" href="#routeproto" title="Permalink to this headline">¶</a></h3>
@@ -1509,23 +1516,23 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the id of the BasePod</p></td>
 </tr>
 <tr class="row-even"><td><p>start_time</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Timestamp">google.protobuf.Timestamp</a></p></td>
 <td><p></p></td>
 <td><p>receiving time</p></td>
 </tr>
 <tr class="row-odd"><td><p>end_time</p></td>
-<td><p><a class="reference external" href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Timestamp">google.protobuf.Timestamp</a></p></td>
 <td><p></p></td>
 <td><p>sending (out) time</p></td>
 </tr>
 <tr class="row-even"><td><p>status</p></td>
-<td><p><a class="reference external" href="#jina.StatusProto">StatusProto</a></p></td>
+<td><p><a class="reference external" href="#jina-StatusProto">StatusProto</a></p></td>
 <td><p></p></td>
 <td><p>the status of the execution</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RoutingEdgeProto"></a></p>
+<p><a name="jina-RoutingEdgeProto"></a></p>
 </section>
 <section id="routingedgeproto">
 <h3>RoutingEdgeProto<a class="headerlink" href="#routingedgeproto" title="Permalink to this headline">¶</a></h3>
@@ -1550,7 +1557,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RoutingTableProto"></a></p>
+<p><a name="jina-RoutingTableProto"></a></p>
 </section>
 <section id="routingtableproto">
 <h3>RoutingTableProto<a class="headerlink" href="#routingtableproto" title="Permalink to this headline">¶</a></h3>
@@ -1564,7 +1571,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>pods</p></td>
-<td><p><a class="reference external" href="#jina.RoutingTableProto.PodsEntry">RoutingTableProto.PodsEntry</a></p></td>
+<td><p><a class="reference external" href="#jina-RoutingTableProto-PodsEntry">RoutingTableProto.PodsEntry</a></p></td>
 <td><p>repeated</p></td>
 <td><p>Pods that get visited during a Flow. Gateway should be both the first and the last entry.</p></td>
 </tr>
@@ -1575,7 +1582,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RoutingTableProto.PodsEntry"></a></p>
+<p><a name="jina-RoutingTableProto-PodsEntry"></a></p>
 </section>
 <section id="routingtableproto-podsentry">
 <h3>RoutingTableProto.PodsEntry<a class="headerlink" href="#routingtableproto-podsentry" title="Permalink to this headline">¶</a></h3>
@@ -1594,13 +1601,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p>value</p></td>
-<td><p><a class="reference external" href="#jina.TargetPodProto">TargetPodProto</a></p></td>
+<td><p><a class="reference external" href="#jina-TargetPodProto">TargetPodProto</a></p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.StatusProto"></a></p>
+<p><a name="jina-StatusProto"></a></p>
 </section>
 <section id="statusproto">
 <h3>StatusProto<a class="headerlink" href="#statusproto" title="Permalink to this headline">¶</a></h3>
@@ -1615,7 +1622,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>code</p></td>
-<td><p><a class="reference external" href="#jina.StatusProto.StatusCode">StatusProto.StatusCode</a></p></td>
+<td><p><a class="reference external" href="#jina-StatusProto-StatusCode">StatusProto.StatusCode</a></p></td>
 <td><p></p></td>
 <td><p>status code</p></td>
 </tr>
@@ -1625,13 +1632,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>error description of the very first exception</p></td>
 </tr>
 <tr class="row-even"><td><p>exception</p></td>
-<td><p><a class="reference external" href="#jina.StatusProto.ExceptionProto">StatusProto.ExceptionProto</a></p></td>
+<td><p><a class="reference external" href="#jina-StatusProto-ExceptionProto">StatusProto.ExceptionProto</a></p></td>
 <td><p></p></td>
 <td><p>the details of the error</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.StatusProto.ExceptionProto"></a></p>
+<p><a name="jina-StatusProto-ExceptionProto"></a></p>
 </section>
 <section id="statusproto-exceptionproto">
 <h3>StatusProto.ExceptionProto<a class="headerlink" href="#statusproto-exceptionproto" title="Permalink to this headline">¶</a></h3>
@@ -1666,7 +1673,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.TargetPodProto"></a></p>
+<p><a name="jina-TargetPodProto"></a></p>
 </section>
 <section id="targetpodproto">
 <h3>TargetPodProto<a class="headerlink" href="#targetpodproto" title="Permalink to this headline">¶</a></h3>
@@ -1700,7 +1707,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 <td><p>the number of parts the pod should expect</p></td>
 </tr>
 <tr class="row-even"><td><p>out_edges</p></td>
-<td><p><a class="reference external" href="#jina.RoutingEdgeProto">RoutingEdgeProto</a></p></td>
+<td><p><a class="reference external" href="#jina-RoutingEdgeProto">RoutingEdgeProto</a></p></td>
 <td><p>repeated</p></td>
 <td><p>pod_name of Pods, the TailPea should send traffic to</p></td>
 </tr>
@@ -1711,7 +1718,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.RequestProto.ControlRequestProto.Command"></a></p>
+<p><a name="jina-RequestProto-ControlRequestProto-Command"></a></p>
 </section>
 <section id="requestproto-controlrequestproto-command">
 <h3>RequestProto.ControlRequestProto.Command<a class="headerlink" href="#requestproto-controlrequestproto-command" title="Permalink to this headline">¶</a></h3>
@@ -1753,7 +1760,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.StatusProto.StatusCode"></a></p>
+<p><a name="jina-StatusProto-StatusCode"></a></p>
 </section>
 <section id="statusproto-statuscode">
 <h3>StatusProto.StatusCode<a class="headerlink" href="#statusproto-statuscode" title="Permalink to this headline">¶</a></h3>
@@ -1795,7 +1802,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.JinaDataRequestRPC"></a></p>
+<p><a name="jina-JinaDataRequestRPC"></a></p>
 </section>
 <section id="jinadatarequestrpc">
 <h3>JinaDataRequestRPC<a class="headerlink" href="#jinadatarequestrpc" title="Permalink to this headline">¶</a></h3>
@@ -1810,13 +1817,13 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Call</p></td>
-<td><p><a class="reference external" href="#jina.MessageProto">MessageProto</a></p></td>
-<td><p><a class="reference external" href="#google.protobuf.Empty">.google.protobuf.Empty</a></p></td>
+<td><p><a class="reference external" href="#jina-MessageProto">MessageProto</a></p></td>
+<td><p><a class="reference external" href="#google-protobuf-Empty">.google.protobuf.Empty</a></p></td>
 <td><p>Pass in a Message, wrapping a DataRequest</p></td>
 </tr>
 </tbody>
 </table></div>
-<p><a name="jina.JinaRPC"></a></p>
+<p><a name="jina-JinaRPC"></a></p>
 </section>
 <section id="jinarpc">
 <h3>JinaRPC<a class="headerlink" href="#jinarpc" title="Permalink to this headline">¶</a></h3>
@@ -1831,8 +1838,8 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Call</p></td>
-<td><p><a class="reference external" href="#jina.RequestProto">RequestProto</a> stream</p></td>
-<td><p><a class="reference external" href="#jina.RequestProto">RequestProto</a> stream</p></td>
+<td><p><a class="reference external" href="#jina-RequestProto">RequestProto</a> stream</p></td>
+<td><p><a class="reference external" href="#jina-RequestProto">RequestProto</a> stream</p></td>
 <td><p>Pass in a Request and a filled Request with matches will be returned.</p></td>
 </tr>
 </tbody>
@@ -2032,7 +2039,7 @@ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Feb 09, 2022.
+                    Last updated on Mar 01, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
