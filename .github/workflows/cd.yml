@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: jina-ai/jina
-          ref: refs/tags/v2.6.4
+          ref: v2.6.4-docs
           token: ${{ secrets.JINA_DOCS2_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v2
