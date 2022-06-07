@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.types.routing package" href="../jina.types.routing/" /><link rel="prev" title="jina.types.request.data module" href="../jina.types.request.data/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.types.request.mixin module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,71 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.types.request.mixin">
-<span id="jina-types-request-mixin-module"></span><h1>jina.types.request.mixin module<a class="headerlink" href="#module-jina.types.request.mixin" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.types.request.mixin.DocsPropertyMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.types.request.mixin.</span></span><span class="sig-name descname"><span class="pre">DocsPropertyMixin</span></span><a class="reference internal" href="../../_modules/jina/types/request/mixin/#DocsPropertyMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.request.mixin.DocsPropertyMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Mixin class of docs property.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.request.mixin.DocsPropertyMixin.body">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">body</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/request/mixin/#DocsPropertyMixin.body"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.request.mixin.DocsPropertyMixin.body" title="Permalink to this definition">¶</a></dt>
-<dd><p>Requred body property</p>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.request.mixin.DocsPropertyMixin.docs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">docs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><span class="pre">docarray.array.document.DocumentArray</span></a></em><a class="headerlink" href="#jina.types.request.mixin.DocsPropertyMixin.docs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the :class: <cite>DocumentArray</cite> with sequence <cite>body.docs</cite> as content.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.types.request.mixin.GroundtruthPropertyMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.types.request.mixin.</span></span><span class="sig-name descname"><span class="pre">GroundtruthPropertyMixin</span></span><a class="reference internal" href="../../_modules/jina/types/request/mixin/#GroundtruthPropertyMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.request.mixin.GroundtruthPropertyMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Mixin class of groundtruths property.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.request.mixin.GroundtruthPropertyMixin.body">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">body</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/request/mixin/#GroundtruthPropertyMixin.body"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.request.mixin.GroundtruthPropertyMixin.body" title="Permalink to this definition">¶</a></dt>
-<dd><p>Requred body property</p>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.request.mixin.GroundtruthPropertyMixin.groundtruths">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">groundtruths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><span class="pre">docarray.array.document.DocumentArray</span></a></em><a class="headerlink" href="#jina.types.request.mixin.GroundtruthPropertyMixin.groundtruths" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the groundtruths in :class: <cite>DocumentArray</cite> type.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.types.request.mixin.CommandMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.types.request.mixin.</span></span><span class="sig-name descname"><span class="pre">CommandMixin</span></span><a class="reference internal" href="../../_modules/jina/types/request/mixin/#CommandMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.request.mixin.CommandMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Mixin class of command property.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.request.mixin.CommandMixin.proto">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">proto</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/request/mixin/#CommandMixin.proto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.request.mixin.CommandMixin.proto" title="Permalink to this definition">¶</a></dt>
-<dd><p>Requred proto property</p>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.request.mixin.CommandMixin.command">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#jina.types.request.mixin.CommandMixin.command" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the command.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="jina-types-request-mixin-module">
+<h1>jina.types.request.mixin module<a class="headerlink" href="#jina-types-request-mixin-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -867,7 +804,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

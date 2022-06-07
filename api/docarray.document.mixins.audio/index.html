@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.document.mixins.buffer module" href="../docarray.document.mixins.buffer/" /><link rel="prev" title="docarray.document.mixins.attribute module" href="../docarray.document.mixins.attribute/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.document.mixins.audio module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,51 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.document.mixins.audio">
-<span id="docarray-document-mixins-audio-module"></span><h1>docarray.document.mixins.audio module<a class="headerlink" href="#module-docarray.document.mixins.audio" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.document.mixins.audio.AudioDataMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.mixins.audio.</span></span><span class="sig-name descname"><span class="pre">AudioDataMixin</span></span><a class="reference internal" href="../../_modules/docarray/document/mixins/audio/#AudioDataMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.audio.AudioDataMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Provide helper functions for <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> to support audio data.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.document.mixins.audio.AudioDataMixin.dump_audio_blob_to_file">
-<span class="sig-name descname"><span class="pre">dump_audio_blob_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">44100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/audio/#AudioDataMixin.dump_audio_blob_to_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.audio.AudioDataMixin.dump_audio_blob_to_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save <a class="reference internal" href="../docarray.document/#docarray.document.Document.blob" title="docarray.document.Document.blob"><code class="xref py py-attr docutils literal notranslate"><span class="pre">blob</span></code></a> into an wav file. Mono/stereo is preserved.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>file</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryIO</span></code>]) – if file is a string, open the file by that name, otherwise treat it as a file-like object.</p></li>
-<li><p><strong>sample_rate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – sampling frequency</p></li>
-<li><p><strong>sample_width</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – sample width in bytes</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>~T</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Document itself after processed</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.document.mixins.audio.AudioDataMixin.load_uri_to_audio_blob">
-<span class="sig-name descname"><span class="pre">load_uri_to_audio_blob</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/audio/#AudioDataMixin.load_uri_to_audio_blob"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.audio.AudioDataMixin.load_uri_to_audio_blob" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert an audio <a class="reference internal" href="../daemon.models.containers/#daemon.models.containers.ContainerMetadata.uri" title="daemon.models.containers.ContainerMetadata.uri"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uri</span></code></a> into <a class="reference internal" href="../docarray.document/#docarray.document.Document.blob" title="docarray.document.Document.blob"><code class="xref py py-attr docutils literal notranslate"><span class="pre">blob</span></code></a> inplace</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>~T</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Document itself after processed</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.document.mixins.audio.AudioDataMixin.convert_uri_to_audio_blob">
-<span class="sig-name descname"><span class="pre">convert_uri_to_audio_blob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docarray.document.mixins.audio.AudioDataMixin.convert_uri_to_audio_blob" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-</dd></dl>
+                <section id="docarray-document-mixins-audio-module">
+<h1>docarray.document.mixins.audio module<a class="headerlink" href="#docarray-document-mixins-audio-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -847,7 +804,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

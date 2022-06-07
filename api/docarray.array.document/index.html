@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.array.match module" href="../docarray.array.match/" /><link rel="prev" title="docarray.array.chunk module" href="../docarray.array.chunk/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.array.document module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,88 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.array.document">
-<span id="docarray-array-document-module"></span><h1>docarray.array.document module<a class="headerlink" href="#module-docarray.array.document" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.document.</span></span><span class="sig-name descname"><span class="pre">DocumentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../docarray.array.mixins/#docarray.array.mixins.AllMixins" title="docarray.array.mixins.AllMixins"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.mixins.AllMixins</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableSequence</span></code></p>
-<p><a class="reference internal" href="#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a> is a mutable sequence of <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code>.
-It gives an efficient view of a list of Document. One can iterate over it like
-a generator but ALSO modify it, count it, get item, or union two ‘DocumentArray’s using the ‘+’ and ‘+=’ operators.</p>
-<p>It is supposed to act as a view containing a pointer to a <cite>RepeatedContainer</cite> of <cite>DocumentProto</cite> while offering <cite>Document</cite> Jina native types
-when getting items or iterating over it</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>docs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]) – the document array to construct from. One can also give <cite>DocumentArrayProto</cite> directly, then depending on the <code class="docutils literal notranslate"><span class="pre">copy</span></code>,
-it builds a view or a copy from it. It also can accept a List</p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray.insert">
-<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray.insert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray.insert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Insert <cite>doc</cite> at <cite>index</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Position of the insertion.</p></li>
-<li><p><strong>doc</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>) – The doc needs to be inserted.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray.append">
-<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray.append"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Append <cite>doc</cite> in <a class="reference internal" href="#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>doc</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>) – The doc needs to be appended.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray.extend">
-<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray.extend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray.extend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extend the <a class="reference internal" href="#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a> by appending all the items from the iterable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>docs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>]) – the iterable of Documents to extend this array with</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear the data of <a class="reference internal" href="#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a></p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray.reverse">
-<span class="sig-name descname"><span class="pre">reverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray.reverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray.reverse" title="Permalink to this definition">¶</a></dt>
-<dd><p>In-place reverse the sequence.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.document.DocumentArray.sort">
-<span class="sig-name descname"><span class="pre">sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/document/#DocumentArray.sort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.document.DocumentArray.sort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sort the items of the <a class="reference internal" href="#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></a> in place.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>) – key callable to sort based upon</p></li>
-<li><p><strong>top_k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – make sure that the first <cite>topk</cite> elements are correctly sorted rather than
-sorting the entire list</p></li>
-<li><p><strong>reverse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – reverse=True will sort the list in descending order. Default is False</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-array-document-module">
+<h1>docarray.array.document module<a class="headerlink" href="#docarray-array-document-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -884,7 +804,7 @@ sorting the entire list</p></li>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

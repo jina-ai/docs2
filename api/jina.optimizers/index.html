@@ -38,13 +38,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.optimizers.discovery module" href="../jina.optimizers.discovery/" /><link rel="prev" title="jina.logging.profile module" href="../jina.logging.profile/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.optimizers package - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -782,169 +782,8 @@
 </ul>
 </div>
 </section>
-<section id="module-jina.optimizers">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-jina.optimizers" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.OptimizerCallback">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.</span></span><span class="sig-name descname"><span class="pre">OptimizerCallback</span></span><a class="reference internal" href="../../_modules/jina/optimizers/#OptimizerCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.OptimizerCallback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../jina.jaml/#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.jaml.JAMLCompatible</span></code></a></p>
-<p>Callback interface for storing and calculating evaluation metric during an optimization.
-Should be used, whenever a custom evaluation aggregation during an Flow optimization is needed.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.OptimizerCallback.get_empty_copy">
-<span class="sig-name descname"><span class="pre">get_empty_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#OptimizerCallback.get_empty_copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.OptimizerCallback.get_empty_copy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return an empty copy of the <a class="reference internal" href="#jina.optimizers.OptimizerCallback" title="jina.optimizers.OptimizerCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizerCallback</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>NotImplementedError</strong> – <a class="reference internal" href="#jina.optimizers.OptimizerCallback" title="jina.optimizers.OptimizerCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizerCallback</span></code></a> is just an interface. Please use any implemented subclass.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#jina.optimizers.OptimizerCallback" title="jina.optimizers.OptimizerCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizerCallback</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.OptimizerCallback.get_final_evaluation">
-<span class="sig-name descname"><span class="pre">get_final_evaluation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#OptimizerCallback.get_final_evaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.OptimizerCallback.get_final_evaluation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the aggregation of all evaluation collected via <a href="#id1"><span class="problematic" id="id2">:method:`__call__`</span></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>NotImplementedError</strong> – <a class="reference internal" href="#jina.optimizers.OptimizerCallback" title="jina.optimizers.OptimizerCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizerCallback</span></code></a> is just an interface. Please use any implemented subclass.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.EvaluationCallback">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.</span></span><span class="sig-name descname"><span class="pre">EvaluationCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eval_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#EvaluationCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.EvaluationCallback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#jina.optimizers.OptimizerCallback" title="jina.optimizers.OptimizerCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.optimizers.OptimizerCallback</span></code></a></p>
-<p>Calculates an aggregation of all evaluations during a single <code class="xref py py-class docutils literal notranslate"><span class="pre">FlowRunner</span></code>
-execution from the <a class="reference internal" href="#jina.optimizers.FlowOptimizer" title="jina.optimizers.FlowOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlowOptimizer</span></code></a> with a given operator.</p>
-<p>Valid operators are: <cite>[‘min’, ‘max’, ‘mean’, ‘median’, ‘sum’, ‘prod’]</cite></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>eval_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – evaluation name as required by the evaluator. Not needed if only 1 evaluator is used</p></li>
-<li><p><strong>operation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name of the operation to be performed when getting the final evaluation</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="jina.optimizers.EvaluationCallback.AGGREGATE_FUNCTIONS">
-<span class="sig-name descname"><span class="pre">AGGREGATE_FUNCTIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['min',</span> <span class="pre">'max',</span> <span class="pre">'mean',</span> <span class="pre">'median',</span> <span class="pre">'sum',</span> <span class="pre">'prod']</span></em><a class="headerlink" href="#jina.optimizers.EvaluationCallback.AGGREGATE_FUNCTIONS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.EvaluationCallback.get_empty_copy">
-<span class="sig-name descname"><span class="pre">get_empty_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#EvaluationCallback.get_empty_copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.EvaluationCallback.get_empty_copy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return an empty copy of the <a class="reference internal" href="#jina.optimizers.EvaluationCallback" title="jina.optimizers.EvaluationCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluationCallback</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Evaluation values</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.EvaluationCallback.get_final_evaluation">
-<span class="sig-name descname"><span class="pre">get_final_evaluation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#EvaluationCallback.get_final_evaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.EvaluationCallback.get_final_evaluation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates and returns evaluation value on the metric defined in the <a href="#id3"><span class="problematic" id="id4">:method:`__init__`</span></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return:</dt>
-<dd class="field-odd"><p>The aggregation of all evaluation collected via <a href="#id5"><span class="problematic" id="id6">:method:`__call__`</span></a></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.ResultProcessor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.</span></span><span class="sig-name descname"><span class="pre">ResultProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#ResultProcessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.ResultProcessor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../jina.jaml/#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.jaml.JAMLCompatible</span></code></a></p>
-<p>Result processor for the Optimizer.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>study</strong> (<em>optuna.study.Study</em>) – optuna study object</p>
-</dd>
-</dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.optimizers.ResultProcessor.study">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">study</span></span><a class="headerlink" href="#jina.optimizers.ResultProcessor.study" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return:</dt>
-<dd class="field-odd"><p>Raw optuna study as calculated by the <a class="reference internal" href="#jina.optimizers.FlowOptimizer" title="jina.optimizers.FlowOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlowOptimizer</span></code></a>.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.optimizers.ResultProcessor.best_parameters">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">best_parameters</span></span><a class="headerlink" href="#jina.optimizers.ResultProcessor.best_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return:</dt>
-<dd class="field-odd"><p>The parameter set, which got the best evaluation result during the optimization.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.ResultProcessor.save_parameters">
-<span class="sig-name descname"><span class="pre">save_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'config/best_config.yml'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#ResultProcessor.save_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.ResultProcessor.save_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stores the best parameters in the given file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filepath</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path where the best parameter config will be saved</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.FlowOptimizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.</span></span><span class="sig-name descname"><span class="pre">FlowOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow_runner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluation_callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace_base_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TPESampler'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'maximize'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#FlowOptimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.FlowOptimizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../jina.jaml/#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.jaml.JAMLCompatible</span></code></a></p>
-<p>Optimizer runs the given flows on multiple parameter configurations in order
-to find the best performing parameters. Uses <cite>optuna</cite> behind the scenes.
-For a detailed information how the parameters are sampled by optuna see
-<a class="reference external" href="https://optuna.readthedocs.io/en/stable/reference/generated/optuna.trial.Trial.html">https://optuna.readthedocs.io/en/stable/reference/generated/optuna.trial.Trial.html</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>flow_runner</strong> (<a class="reference internal" href="../jina.optimizers.flow_runner/#jina.optimizers.flow_runner.FlowRunner" title="jina.optimizers.flow_runner.FlowRunner"><em>FlowRunner</em></a>) – <cite>FlowRunner</cite> object which contains the flows to be run.</p></li>
-<li><p><strong>parameter_yaml</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – yaml container the parameters to be optimized</p></li>
-<li><p><strong>evaluation_callback</strong> (<a class="reference internal" href="#jina.optimizers.OptimizerCallback" title="jina.optimizers.OptimizerCallback"><em>OptimizerCallback</em></a>) – The callback object, which stores the evaluation results</p></li>
-<li><p><strong>n_trials</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – evaluation trials to be run</p></li>
-<li><p><strong>workspace_base_dir</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – directory in which all temporary created data should be stored</p></li>
-<li><p><strong>sampler</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The optuna sampler. For a list of usable names see: <a class="reference external" href="https://optuna.readthedocs.io/en/stable/reference/samplers.html">https://optuna.readthedocs.io/en/stable/reference/samplers.html</a></p></li>
-<li><p><strong>direction</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – direction of the optimization from either of <cite>maximize</cite> or <cite>minimize</cite></p></li>
-<li><p><strong>seed</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – random seed for reproducibility</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.FlowOptimizer.optimize_flow">
-<span class="sig-name descname"><span class="pre">optimize_flow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#FlowOptimizer.optimize_flow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.FlowOptimizer.optimize_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Will run the actual optimization.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>kwargs</strong> – extra parameters for optuna sampler</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#jina.optimizers.ResultProcessor" title="jina.optimizers.ResultProcessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultProcessor</span></code></a></p>
-</dd>
-<dt class="field-odd">Return:</dt>
-<dd class="field-odd"><p>The aggregated result of the optimization run as a <a class="reference internal" href="#jina.optimizers.ResultProcessor" title="jina.optimizers.ResultProcessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultProcessor</span></code></a>.</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.optimizers.run_optimizer_cli">
-<span class="sig-prename descclassname"><span class="pre">jina.optimizers.</span></span><span class="sig-name descname"><span class="pre">run_optimizer_cli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/#run_optimizer_cli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.run_optimizer_cli" title="Permalink to this definition">¶</a></dt>
-<dd><p>Used to run the FlowOptimizer from command line interface.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – arguments passed via cli</p>
-</dd>
-</dl>
-</dd></dl>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
@@ -980,7 +819,7 @@ For a detailed information how the parameters are sampled by optuna see
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
@@ -1007,7 +846,7 @@ For a detailed information how the parameters are sampled by optuna see
                         <ul>
 <li><a class="reference internal" href="#">jina.optimizers package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-jina.optimizers">Module contents</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

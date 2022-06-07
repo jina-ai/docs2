@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="daemon.parser module" href="../daemon.parser/" /><link rel="prev" title="daemon.files module" href="../daemon.files/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>daemon.helper module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,121 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-daemon.helper">
-<span id="daemon-helper-module"></span><h1>daemon.helper module<a class="headerlink" href="#module-daemon.helper" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="daemon.helper.classproperty">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">classproperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fget</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#classproperty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.classproperty" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Helper class to read property inside a classmethod</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.id_cleaner">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">id_cleaner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docker_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sha256:'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#id_cleaner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.id_cleaner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get 1st 10 characters in id created by docker</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>docker_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – id of docker object</p></li>
-<li><p><strong>prefix</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – defaults to ‘sha256:’</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>shorter id</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.get_workspace_path">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">get_workspace_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workspace_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#get_workspace_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.get_workspace_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>get the path to the ws</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>workspace_id</strong> (<a class="reference internal" href="../daemon.models.id/#daemon.models.id.DaemonID" title="daemon.models.id.DaemonID"><em>DaemonID</em></a>) – the id of the ws</p></li>
-<li><p><strong>args</strong> – paths to join</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the full path</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.is_error_message">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">is_error_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#is_error_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.is_error_message" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if the string matches an exception regex.
-:param s: the string to check
-:rtype: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
-:return: whether or not it matches</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.get_log_file_path">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">get_log_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#get_log_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.get_log_file_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get logfile path from id</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>log_id</strong> (<a class="reference internal" href="../daemon.models.id/#daemon.models.id.DaemonID" title="daemon.models.id.DaemonID"><em>DaemonID</em></a>) – DaemonID in the store</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>logfile path, workspace_id for log_id</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.if_alive">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">if_alive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#if_alive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.if_alive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decorator to be used in store for connection valiation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>func</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>) – function to be wrapped</p></li>
-<li><p><strong>raise_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code>]) – Exception class to be raied</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>wrapped function</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.error_msg_from">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">error_msg_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#error_msg_from"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.error_msg_from" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get error message from response</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>response</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>) – dict response</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>prettified response string</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.change_cwd">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">change_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#change_cwd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.change_cwd" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change the current working dir to <code class="docutils literal notranslate"><span class="pre">path</span></code> in a context and set it back to the original one when leaves the context.
-Yields nothing
-:param path: Target path.
-:yields: nothing</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.helper.change_env">
-<span class="sig-prename descclassname"><span class="pre">daemon.helper.</span></span><span class="sig-name descname"><span class="pre">change_env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/helper/#change_env"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.helper.change_env" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change the environment of <code class="docutils literal notranslate"><span class="pre">key</span></code> to <code class="docutils literal notranslate"><span class="pre">val</span></code> in a context and set it back to the original one when leaves the context.
-:param key: Old environment variable.
-:param val: New environment variable.
-:yields: nothing</p>
-</dd></dl>
+                <section id="daemon-helper-module">
+<h1>daemon.helper module<a class="headerlink" href="#daemon-helper-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -917,7 +804,7 @@ Yields nothing
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

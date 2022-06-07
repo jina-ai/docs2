@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.simple.score module" href="../docarray.simple.score/" /><link rel="prev" title="docarray.simple.list module" href="../docarray.simple.list/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.simple.map module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,36 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.simple.map">
-<span id="docarray-simple-map-module"></span><h1>docarray.simple.map module<a class="headerlink" href="#module-docarray.simple.map" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.simple.map.NamedScoreMap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.simple.map.</span></span><span class="sig-name descname"><span class="pre">NamedScoreMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/simple/map/#NamedScoreMap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.simple.map.NamedScoreMap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../docarray.base/#docarray.base.BaseProtoView" title="docarray.base.BaseProtoView"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.base.BaseProtoView</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableMapping</span></code></p>
-<p>It offers a Pythonic interface to allow users access and manipulate
-<code class="xref py py-class docutils literal notranslate"><span class="pre">docarray_pb2.NamedScoreMappingProto</span></code> object without working with Protobuf itself.</p>
-<p>It offers an interface to access and update scores as <cite>NamedScore</cite> as values of a <cite>dict</cite> with a string key.</p>
-<p>To create a <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScoreMappingProto</span></code> object, simply:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jina.types.score.map</span> <span class="kn">import</span> <span class="n">NamedScoreMapping</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="n">NamedScoreMapping</span><span class="p">()</span>
-<span class="n">scores</span><span class="p">[</span><span class="s1">'score'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScoreMapping</span></code> can be built from <code class="docutils literal notranslate"><span class="pre">docarray_pb2.NamedScoreMappingProto</span></code> (as a weak reference or a deep copy)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scores</strong> – The scores to construct from, depending on the <code class="docutils literal notranslate"><span class="pre">copy</span></code>,
-it builds a view or a copy from it.</p></li>
-<li><p><strong>copy</strong> (<em>bool</em>) – When <code class="docutils literal notranslate"><span class="pre">scores</span></code> is given as a <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScoreMappingProto</span></code> object, build a
-view (i.e. weak reference) from it or a deep copy from it.</p></li>
-<li><p><strong>kwargs</strong> – Other parameters to be set</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+                <section id="docarray-simple-map-module">
+<h1>docarray.simple.map module<a class="headerlink" href="#docarray-simple-map-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -832,7 +804,7 @@ view (i.e. weak reference) from it or a deep copy from it.</p></li>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

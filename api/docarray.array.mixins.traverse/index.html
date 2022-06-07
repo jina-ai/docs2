@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.array.chunk module" href="../docarray.array.chunk/" /><link rel="prev" title="docarray.array.mixins.text module" href="../docarray.array.mixins.text/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.array.mixins.traverse module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,115 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.array.mixins.traverse">
-<span id="docarray-array-mixins-traverse-module"></span><h1>docarray.array.mixins.traverse module<a class="headerlink" href="#module-docarray.array.mixins.traverse" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.array.mixins.traverse.TraverseMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.mixins.traverse.</span></span><span class="sig-name descname"><span class="pre">TraverseMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/mixins/traverse/#TraverseMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.traverse.TraverseMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A mixin used for traversing <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayMemmap</span></code>.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.traverse.TraverseMixin.traverse">
-<span class="sig-name descname"><span class="pre">traverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traversal_paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/traverse/#TraverseMixin.traverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.traverse.TraverseMixin.traverse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return an Iterator of :class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> of the leaves when applying the traversal_paths.
-Each :class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> is either the root Documents, a ChunkArray or a MatchArray.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a comma-separated string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
-</ul>
-</dd>
-<dt class="field-even">Yield</dt>
-<dd class="field-even"><p>:class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> of the leaves when applying the traversal_paths.</p>
-</dd>
-</dl>
-<p>Example on <code class="docutils literal notranslate"><span class="pre">traversal_paths</span></code>:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><cite>r</cite>: docs in this TraversableSequence</p></li>
-<li><p><cite>m</cite>: all match-documents at adjacency 1</p></li>
-<li><p><cite>c</cite>: all child-documents at granularity 1</p></li>
-<li><p><cite>cc</cite>: all child-documents at granularity 2</p></li>
-<li><p><cite>mm</cite>: all match-documents at adjacency 2</p></li>
-<li><p><cite>cm</cite>: all match-document at adjacency 1 and granularity 1</p></li>
-<li><p><cite>r,c</cite>: docs in this TraversableSequence and all child-documents at granularity 1</p></li>
-</ul>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.traverse.TraverseMixin.traverse_flat_per_path">
-<span class="sig-name descname"><span class="pre">traverse_flat_per_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traversal_paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/traverse/#TraverseMixin.traverse_flat_per_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.traverse.TraverseMixin.traverse_flat_per_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a flattened :class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> per path in <code class="docutils literal notranslate"><span class="pre">traversal_paths</span></code>
-with all Documents, that are reached by the path.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a comma-separated string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
-</ul>
-</dd>
-<dt class="field-even">Yield</dt>
-<dd class="field-even"><p>:class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> containing the document of all leaves per path.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.traverse.TraverseMixin.traverse_flat">
-<span class="sig-name descname"><span class="pre">traverse_flat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traversal_paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/traverse/#TraverseMixin.traverse_flat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.traverse.TraverseMixin.traverse_flat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single flattened :class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> with all Documents, that are reached
-via the <code class="docutils literal notranslate"><span class="pre">traversal_paths</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>When defining the <code class="docutils literal notranslate"><span class="pre">traversal_paths</span></code> with multiple paths, the returned
-:class:<code class="docutils literal notranslate"><span class="pre">Documents</span></code> are determined at once and not on the fly. This is a different
-behavior then in :method:<code class="docutils literal notranslate"><span class="pre">traverse</span></code> and :method:<code class="docutils literal notranslate"><span class="pre">traverse_flattened_per_path</span></code>!</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a list of string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a single :class:<code class="docutils literal notranslate"><span class="pre">TraversableSequence</span></code> containing the document of all leaves when applying the traversal_paths.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.traverse.TraverseMixin.flatten">
-<span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/traverse/#TraverseMixin.flatten"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.traverse.TraverseMixin.flatten" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flatten all nested chunks and matches into one <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Flatten an already flattened DocumentArray will have no effect.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>DocumentArrayMemmap do not support <cite>copy=False</cite>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>copy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – copy the document (DAM only supports copy=True), otherwise returns a view of the original</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray">DocumentArray</a></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a flattened <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code> object.</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-array-mixins-traverse-module">
+<h1>docarray.array.mixins.traverse module<a class="headerlink" href="#docarray-array-mixins-traverse-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -911,7 +804,7 @@ behavior then in :method:<code class="docutils literal notranslate"><span class=
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

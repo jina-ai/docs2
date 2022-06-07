@@ -12,8 +12,6 @@
   
 <meta property="og:site_name" content="Jina 2.6.4-master Documentation" />
   
-<meta property="og:description" content="Module for helper functions in the parser" />
-  
 <meta property="og:image" content="https://docs.jina.ai/_static/banner.png" />
   
 <meta property="og:image:alt" content="Jina 2.6.4-master Documentation" />
@@ -38,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.parsers.optimizer module" href="../jina.parsers.optimizer/" /><link rel="prev" title="jina.parsers.helloworld module" href="../jina.parsers.helloworld/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.parsers.helper module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -770,33 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.parsers.helper">
-<span id="jina-parsers-helper-module"></span><h1>jina.parsers.helper module<a class="headerlink" href="#module-jina.parsers.helper" title="Permalink to this headline">¶</a></h1>
-<p>Module for helper functions in the parser</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.parsers.helper.add_arg_group">
-<span class="sig-prename descclassname"><span class="pre">jina.parsers.helper.</span></span><span class="sig-name descname"><span class="pre">add_arg_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/parsers/helper/#add_arg_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.parsers.helper.add_arg_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add the arguments for a specific group to the parser</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>parser</strong> – the parser configure</p></li>
-<li><p><strong>title</strong> – the group name</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the new parser</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.parsers.helper.KVAppendAction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.parsers.helper.</span></span><span class="sig-name descname"><span class="pre">KVAppendAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option_strings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metavar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/parsers/helper/#KVAppendAction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.parsers.helper.KVAppendAction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.Action</span></code></p>
-<p>argparse action to split an argument into KEY=VALUE form
-on the first = and append to a dictionary.
-This is used for setting up –env</p>
-</dd></dl>
+                <section id="jina-parsers-helper-module">
+<h1>jina.parsers.helper module<a class="headerlink" href="#jina-parsers-helper-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -831,7 +804,7 @@ This is used for setting up –env</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

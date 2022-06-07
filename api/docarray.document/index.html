@@ -38,13 +38,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.document.mixins package" href="../docarray.document.mixins/" /><link rel="prev" title="docarray.array.types module" href="../docarray.array.types/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.document package - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -794,7 +794,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../docarray.document.mixins.video/">docarray.document.mixins.video module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../docarray.document.mixins/#module-docarray.document.mixins">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docarray.document.mixins/#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -808,345 +808,8 @@
 </ul>
 </div>
 </section>
-<section id="module-docarray.document">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docarray.document" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.document.Document">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.</span></span><span class="sig-name descname"><span class="pre">Document</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adjacency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ArrayType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#docarray.document.Document" title="docarray.document.Document"><span class="pre">Document</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ArrayType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">granularity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matches</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#docarray.document.Document" title="docarray.document.Document"><span class="pre">Document</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mime_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../docarray.simple.struct/#docarray.simple.struct.StructView" title="docarray.simple.struct.StructView"><span class="pre">docarray.simple.struct.StructView</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/#Document"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.Document" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../docarray.document.mixins/#docarray.document.mixins.AllMixins" title="docarray.document.mixins.AllMixins"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.document.mixins.AllMixins</span></code></a>, <a class="reference internal" href="../docarray.base/#docarray.base.BaseProtoView" title="docarray.base.BaseProtoView"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.base.BaseProtoView</span></code></a></p>
-<p><a class="reference internal" href="#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a> is one of the <strong>primitive data type</strong> in Jina.</p>
-<p>It offers a Pythonic interface to allow users access and manipulate
-<code class="xref py py-class docutils literal notranslate"><span class="pre">jina.docarray_pb2.DocumentProto</span></code> object without working with Protobuf itself.</p>
-<p>To create a <a class="reference internal" href="#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a> object, simply:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jina</span> <span class="kn">import</span> <span class="n">Document</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">Document</span><span class="p">()</span>
-<span class="n">d</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">'abc'</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>Jina requires each Document to have a string id. You can set a custom one,
-or if non has been set a random one will be assigned.</p>
-<p>To access and modify the content of the document, you can use <a class="reference internal" href="#docarray.document.Document.text" title="docarray.document.Document.text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">text</span></code></a>, <a class="reference internal" href="#docarray.document.Document.blob" title="docarray.document.Document.blob"><code class="xref py py-attr docutils literal notranslate"><span class="pre">blob</span></code></a>, and <a class="reference internal" href="#docarray.document.Document.buffer" title="docarray.document.Document.buffer"><code class="xref py py-attr docutils literal notranslate"><span class="pre">buffer</span></code></a>.
-Each property is implemented with proper setter, to improve the integrity and user experience. For example,
-assigning <code class="docutils literal notranslate"><span class="pre">doc.blob</span></code> or <code class="docutils literal notranslate"><span class="pre">doc.embedding</span></code> can be simply done via:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># to set as content</span>
-<span class="n">d</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-
-<span class="c1"># to set as embedding</span>
-<span class="n">d</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>MIME type is auto set/guessed when setting <code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code> and <a class="reference internal" href="#docarray.document.Document.uri" title="docarray.document.Document.uri"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uri</span></code></a></p>
-<p><a class="reference internal" href="#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a> also provides multiple way to build from existing Document. You can build <a class="reference internal" href="#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>
-from <code class="docutils literal notranslate"><span class="pre">docarray_pb2.DocumentProto</span></code>, <code class="docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, and <code class="docutils literal notranslate"><span class="pre">Dict</span></code>. You can also use it as view (i.e.
-weak reference when building from an existing <code class="docutils literal notranslate"><span class="pre">docarray_pb2.DocumentProto</span></code>). For example,</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">DocumentProto</span><span class="p">()</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">a</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">'hello'</span>
-<span class="k">assert</span> <span class="n">b</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s1">'hello'</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>You can leverage the <code class="xref py py-meth docutils literal notranslate"><span class="pre">convert_a_to_b()</span></code> interface to convert between content forms.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>obj</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the document to construct from. If <code class="docutils literal notranslate"><span class="pre">bytes</span></code> is given
-then deserialize a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentProto</span></code>; <code class="docutils literal notranslate"><span class="pre">dict</span></code> is given then
-parse a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentProto</span></code> from it; <code class="docutils literal notranslate"><span class="pre">str</span></code> is given, then consider
-it as a JSON string and parse a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentProto</span></code> from it; finally,
-one can also give <cite>DocumentProto</cite> directly, then depending on the <code class="docutils literal notranslate"><span class="pre">copy</span></code>,
-it builds a view or a copy from it.</p></li>
-<li><p><strong>copy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – when <code class="docutils literal notranslate"><span class="pre">document</span></code> is given as a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentProto</span></code> object, build a
-view (i.e. weak reference) from it or a deep copy from it.</p></li>
-<li><p><strong>field_resolver</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – a map from field names defined in JSON, dict to the field
-names defined in Document.</p></li>
-<li><p><strong>kwargs</strong> – other parameters to be set _after_ the document is constructed</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When <code class="docutils literal notranslate"><span class="pre">document</span></code> is a JSON string or Python dictionary object, the constructor will only map the values
-from known fields defined in Protobuf, all unknown fields are mapped to <code class="docutils literal notranslate"><span class="pre">document.tags</span></code>. For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Document</span><span class="p">({</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'123'</span><span class="p">,</span> <span class="s1">'hello'</span><span class="p">:</span> <span class="s1">'world'</span><span class="p">,</span> <span class="s1">'tags'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'good'</span><span class="p">:</span> <span class="s1">'bye'</span><span class="p">}})</span>
-
-<span class="k">assert</span> <span class="n">d</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s1">'123'</span>  <span class="c1"># true</span>
-<span class="k">assert</span> <span class="n">d</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="s1">'hello'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'world'</span>  <span class="c1"># true</span>
-<span class="k">assert</span> <span class="n">d</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="s1">'good'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'bye'</span>  <span class="c1"># true</span>
-</pre></div>
-</div>
-</div>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.weight">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#docarray.document.Document.weight" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the weight of the document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.modality">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modality</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.document.Document.modality" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the modality of the document.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.tags">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.simple.struct/#docarray.simple.struct.StructView" title="docarray.simple.struct.StructView"><span class="pre">docarray.simple.struct.StructView</span></a></em><a class="headerlink" href="#docarray.document.Document.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <cite>tags</cite> field of this Document as a Python dict</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.simple.struct/#docarray.simple.struct.StructView" title="docarray.simple.struct.StructView"><code class="xref py py-class docutils literal notranslate"><span class="pre">StructView</span></code></a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a Python dict view of the tags.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.document.Document.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The document id in string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the id of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.parent_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.document.Document.parent_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The document’s parent id in string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the parent id of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.blob">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">blob</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ArrayType</span></em><a class="headerlink" href="#docarray.document.Document.blob" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">blob</span></code>, one of the content form of a Document.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use <code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code> to return the content of a Document</p>
-<p>This property will return the <cite>blob</cite> of the <cite>Document</cite> as a <cite>Dense</cite> or <cite>Sparse</cite> array depending on the actual
-proto instance stored. In the case where the <cite>blob</cite> stored is sparse, it will return them as a <cite>coo</cite> matrix.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ArrayType</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the blob content of thi Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.embedding">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">embedding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ArrayType</span></em><a class="headerlink" href="#docarray.document.Document.embedding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">embedding</span></code> of the content of a Document.</p>
-<blockquote>
-<div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This property will return the <cite>embedding</cite> of the <cite>Document</cite> as a <cite>Dense</cite> or <cite>Sparse</cite> array depending on the actual
-proto instance stored. In the case where the <cite>embedding</cite> stored is sparse, it will return them as a <cite>coo</cite> matrix.</p>
-</div>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ArrayType</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the embedding of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.matches">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">matches</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.match/#docarray.array.match.MatchArray" title="docarray.array.match.MatchArray"><span class="pre">MatchArray</span></a></em><a class="headerlink" href="#docarray.document.Document.matches" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get all matches of the current document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.array.match/#docarray.array.match.MatchArray" title="docarray.array.match.MatchArray">MatchArray</a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the array of matches attached to this document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.chunks">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chunks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.chunk/#docarray.array.chunk.ChunkArray" title="docarray.array.chunk.ChunkArray"><span class="pre">ChunkArray</span></a></em><a class="headerlink" href="#docarray.document.Document.chunks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get all chunks of the current document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.array.chunk/#docarray.array.chunk.ChunkArray" title="docarray.array.chunk.ChunkArray">ChunkArray</a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the array of chunks of this document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.buffer">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">buffer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#docarray.document.Document.buffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">buffer</span></code>, one of the content form of a Document.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use <code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code> to return the content of a Document</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the buffer bytes from this document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.text">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.document.Document.text" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code>, one of the content form of a Document.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use <code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code> to return the content of a Document</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the text from this document content</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.uri">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uri</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.document.Document.uri" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the URI of the document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the uri of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.mime_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mime_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.document.Document.mime_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get MIME type of the document</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the mime_type of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.granularity">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">granularity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.document.Document.granularity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the granularity of the document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the granularity of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.adjacency">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">adjacency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.document.Document.adjacency" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the adjacency of the document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the adjacency of this Document</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.scores">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scores</span></span><a class="headerlink" href="#docarray.document.Document.scores" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the scores of the document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the scores attached to this document as <cite>:class:NamedScoreMapping</cite></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.evaluations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.simple.map/#docarray.simple.map.NamedScoreMap" title="docarray.simple.map.NamedScoreMap"><span class="pre">docarray.simple.map.NamedScoreMap</span></a></em><a class="headerlink" href="#docarray.document.Document.evaluations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the evaluations of the document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.simple.map/#docarray.simple.map.NamedScoreMap" title="docarray.simple.map.NamedScoreMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScoreMap</span></code></a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the evaluations attached to this document as <cite>:class:NamedScoreMapping</cite></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.location">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.document.Document.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the location information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>location info in a tuple.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.document.Document.offset">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#docarray.document.Document.offset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the offset information of this Document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the offset</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
@@ -1182,7 +845,7 @@ proto instance stored. In the case where the <cite>embedding</cite> stored is sp
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
@@ -1210,7 +873,7 @@ proto instance stored. In the case where the <cite>embedding</cite> stored is sp
 <li><a class="reference internal" href="#">docarray.document package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-docarray.document">Module contents</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

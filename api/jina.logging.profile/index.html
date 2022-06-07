@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.optimizers package" href="../jina.optimizers/" /><link rel="prev" title="jina.logging.predefined module" href="../jina.logging.predefined/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.logging.profile module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,167 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.logging.profile">
-<span id="jina-logging-profile-module"></span><h1>jina.logging.profile module<a class="headerlink" href="#module-jina.logging.profile" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.logging.profile.used_memory">
-<span class="sig-prename descclassname"><span class="pre">jina.logging.profile.</span></span><span class="sig-name descname"><span class="pre">used_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1073741824</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#used_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.used_memory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the memory usage of the current process.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>unit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Unit of the memory, default in Gigabytes.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Memory usage of the current process.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.logging.profile.used_memory_readable">
-<span class="sig-prename descclassname"><span class="pre">jina.logging.profile.</span></span><span class="sig-name descname"><span class="pre">used_memory_readable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#used_memory_readable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.used_memory_readable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the memory usage of the current process in a human-readable format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Memory usage of the current process.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.logging.profile.profiling">
-<span class="sig-prename descclassname"><span class="pre">jina.logging.profile.</span></span><span class="sig-name descname"><span class="pre">profiling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#profiling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.profiling" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create the Decorator to mark a function for profiling. The time and memory usage will be recorded and printed.</p>
-<p>Example:
-.. highlight:: python
-.. code-block:: python</p>
-<blockquote>
-<div><p>@profiling
-def foo():</p>
-<blockquote>
-<div><p>print(1)</p>
-</div></blockquote>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>func</strong> – function to be profiled</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>arguments wrapper</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.logging.profile.TimeDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.logging.profile.</span></span><span class="sig-name descname"><span class="pre">TimeDict</span></span><a class="reference internal" href="../../_modules/jina/logging/profile/#TimeDict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.TimeDict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Records of time information.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.logging.profile.TimeDict.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#TimeDict.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.TimeDict.reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear the time information.</p>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.logging.profile.TimeContext">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.logging.profile.</span></span><span class="sig-name descname"><span class="pre">TimeContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#TimeContext"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.TimeContext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Timing a code snippet with a context manager.</p>
-<p>Create the context manager to timing a code snippet.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>task_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The context/message.</p></li>
-<li><p><strong>logger</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="../jina.logging.logger/#jina.logging.logger.JinaLogger" title="jina.logging.logger.JinaLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">JinaLogger</span></code></a>]) – Use existing logger or use naive <code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<p>Example:
-.. highlight:: python
-.. code-block:: python</p>
-<blockquote>
-<div><dl class="simple">
-<dt>with TimeContext(‘loop’):</dt><dd><p>do_busy()</p>
-</dd>
-</dl>
-</div></blockquote>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="jina.logging.profile.TimeContext.time_attrs">
-<span class="sig-name descname"><span class="pre">time_attrs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['years',</span> <span class="pre">'months',</span> <span class="pre">'days',</span> <span class="pre">'hours',</span> <span class="pre">'minutes',</span> <span class="pre">'seconds']</span></em><a class="headerlink" href="#jina.logging.profile.TimeContext.time_attrs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.logging.profile.TimeContext.now">
-<span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#TimeContext.now"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.TimeContext.now" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the passed time from start to now.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>passed time</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.logging.profile.ProgressBar">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.logging.profile.</span></span><span class="sig-name descname"><span class="pre">ProgressBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Working...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_on_done</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_line_feed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#ProgressBar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.ProgressBar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#jina.logging.profile.TimeContext" title="jina.logging.profile.TimeContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.logging.profile.TimeContext</span></code></a></p>
-<p>A simple progress bar.</p>
-<dl>
-<dt>Example:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="s1">'loop'</span><span class="p">):</span>
-    <span class="n">do_busy</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-<p>Create the ProgressBar.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>description</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The name of the task, will be displayed in front of the bar.</p></li>
-<li><p><strong>message_on_done</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – The final message to print when the progress is complete</p></li>
-<li><p><strong>final_line_feed</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if False, the line will not get a Line Feed and thus is easily overwritable.</p></li>
-<li><p><strong>total_length</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – if set, then every <a class="reference internal" href="#jina.logging.profile.ProgressBar.update" title="jina.logging.profile.ProgressBar.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code></a> increases the bar by <cite>1/total_length * _bars_on_row</cite></p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="jina.logging.profile.ProgressBar.col_width">
-<span class="sig-name descname"><span class="pre">col_width</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#jina.logging.profile.ProgressBar.col_width" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="jina.logging.profile.ProgressBar.clear_line">
-<span class="sig-name descname"><span class="pre">clear_line</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\r</span>                                                                                                    <span class="pre">\r'</span></em><a class="headerlink" href="#jina.logging.profile.ProgressBar.clear_line" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="jina.logging.profile.ProgressBar.spinner">
-<span class="sig-name descname"><span class="pre">spinner</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;itertools.cycle</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#jina.logging.profile.ProgressBar.spinner" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.logging.profile.ProgressBar.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ProgressBarStatus.WORKING</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_enter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/logging/profile/#ProgressBar.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.logging.profile.ProgressBar.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Increment the progress bar by one unit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – The number of unit to increment.</p></li>
-<li><p><strong>description</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Change the description text before the progress bar on update.</p></li>
-<li><p><strong>message</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Change the message text followed after the progress bar on update.</p></li>
-<li><p><strong>status</strong> (<a class="reference internal" href="../jina.enums/#jina.enums.ProgressBarStatus" title="jina.enums.ProgressBarStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProgressBarStatus</span></code></a>) – If set to a value, it will mark the task as complete, can be either “Done” or “Canceled”</p></li>
-<li><p><strong>first_enter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if this method is called by <cite>__enter__</cite></p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="jina-logging-profile-module">
+<h1>jina.logging.profile module<a class="headerlink" href="#jina-logging-profile-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -963,7 +804,7 @@ def foo():</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.simple.struct module" href="../docarray.simple.struct/" /><link rel="prev" title="docarray.simple.map module" href="../docarray.simple.map/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.simple.score module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,113 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.simple.score">
-<span id="docarray-simple-score-module"></span><h1>docarray.simple.score module<a class="headerlink" href="#module-docarray.simple.score" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.simple.score.NamedScore">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.simple.score.</span></span><span class="sig-name descname"><span class="pre">NamedScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/simple/score/#NamedScore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.simple.score.NamedScore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../docarray.base/#docarray.base.BaseProtoView" title="docarray.base.BaseProtoView"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.base.BaseProtoView</span></code></a></p>
-<p><a class="reference internal" href="#docarray.simple.score.NamedScore" title="docarray.simple.score.NamedScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScore</span></code></a> is one of the <strong>primitive data type</strong> in Jina.</p>
-<p>It offers a Pythonic interface to allow users access and manipulate
-<code class="xref py py-class docutils literal notranslate"><span class="pre">jina.docarray_pb2.NamedScoreProto</span></code> object without working with Protobuf itself.</p>
-<p>To create a <a class="reference internal" href="#docarray.simple.score.NamedScore" title="docarray.simple.score.NamedScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScore</span></code></a> object, simply:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jina.types.score</span> <span class="kn">import</span> <span class="n">NamedScore</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">NamedScore</span><span class="p">()</span>
-<span class="n">score</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">10.0</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="#docarray.simple.score.NamedScore" title="docarray.simple.score.NamedScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScore</span></code></a> can be built from <code class="docutils literal notranslate"><span class="pre">docarray_pb2.NamedScoreProto</span></code> (as a weak reference or a deep copy)
-or from a set of <cite>attributes</cite> from <code class="docutils literal notranslate"><span class="pre">docarray_pb2.NamedScoreProto</span></code> passed to the constructor.</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jina.types.score</span> <span class="kn">import</span> <span class="n">NamedScore</span>
-<span class="kn">from</span> <span class="nn">docarray_pb2</span> <span class="kn">import</span> <span class="n">NamedScoreProto</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">NamedScore</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">op_name</span><span class="o">=</span><span class="s1">'ranker'</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">'score computed by ranker'</span><span class="p">)</span>
-
-<span class="n">score_proto</span> <span class="o">=</span> <span class="n">NamedScoreProto</span><span class="p">()</span>
-<span class="n">score_proto</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">10.0</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">NamedScore</span><span class="p">(</span><span class="n">score_proto</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>score</strong> (<em>Optional</em><em>[</em><em>docarray_pb2.NamedScoreProto</em><em>]</em>) – The score to construct from, depending on the <code class="docutils literal notranslate"><span class="pre">copy</span></code>,
-it builds a view or a copy from it.</p></li>
-<li><p><strong>copy</strong> (<em>bool</em>) – When <code class="docutils literal notranslate"><span class="pre">score</span></code> is given as a <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScoreProto</span></code> object, build a
-view (i.e. weak reference) from it or a deep copy from it.</p></li>
-<li><p><strong>kwargs</strong> – Other parameters to be set</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.simple.score.NamedScore.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#docarray.simple.score.NamedScore.value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">value</span></code> of this NamedScore, the <cite>id</cite> of which this NamedScore is a score.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the score value</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.simple.score.NamedScore.ref_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ref_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.simple.score.NamedScore.ref_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">ref_id</span></code> of this NamedScore, the <cite>id</cite> of which this NamedScore is a score.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the ref_id</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.simple.score.NamedScore.op_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">op_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.simple.score.NamedScore.op_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">op_name</span></code> of this NamedScore</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the op_name</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.simple.score.NamedScore.description">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.simple.score.NamedScore.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">description</span></code> of this NamedScore</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the description</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.simple.score.NamedScore.operands">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operands</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#docarray.simple.score.NamedScore" title="docarray.simple.score.NamedScore"><span class="pre">docarray.simple.score.NamedScore</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.simple.score.NamedScore.operands" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of nested NamedScore operands.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#docarray.simple.score.NamedScore" title="docarray.simple.score.NamedScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamedScore</span></code></a>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>list of nested NamedScore operands.</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-simple-score-module">
+<h1>docarray.simple.score module<a class="headerlink" href="#docarray-simple-score-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -909,7 +804,7 @@ view (i.e. weak reference) from it or a deep copy from it.</p></li>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

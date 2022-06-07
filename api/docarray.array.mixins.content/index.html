@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.array.mixins.embed module" href="../docarray.array.mixins.embed/" /><link rel="prev" title="docarray.array.mixins.io.pushpull module" href="../docarray.array.mixins.io.pushpull/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.array.mixins.content module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,87 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.array.mixins.content">
-<span id="docarray-array-mixins-content-module"></span><h1>docarray.array.mixins.content module<a class="headerlink" href="#module-docarray.array.mixins.content" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.array.mixins.content.ContentPropertyMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.mixins.content.</span></span><span class="sig-name descname"><span class="pre">ContentPropertyMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/mixins/content/#ContentPropertyMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.content.ContentPropertyMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Helpers that provide faster getter &amp; setter for <a class="reference internal" href="../docarray.document.mixins.content/#docarray.document.mixins.content.ContentPropertyMixin.content" title="docarray.document.mixins.content.ContentPropertyMixin.content"><code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code></a> by using protobuf directly.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.mixins.content.ContentPropertyMixin.embeddings">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ArrayType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.mixins.content.ContentPropertyMixin.embeddings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> stacking all the <cite>embedding</cite> attributes as rows.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> of embedding</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.mixins.content.ContentPropertyMixin.blobs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">blobs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ArrayType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.mixins.content.ContentPropertyMixin.blobs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> stacking all <a class="reference internal" href="../docarray.document/#docarray.document.Document.blob" title="docarray.document.Document.blob"><code class="xref py py-attr docutils literal notranslate"><span class="pre">blob</span></code></a>.</p>
-<p>The <cite>blob</cite> attributes are stacked together along a newly created first
-dimension (as if you would stack using <code class="docutils literal notranslate"><span class="pre">np.stack(X,</span> <span class="pre">axis=0)</span></code>).</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This operation assumes all blobs have the same shape and dtype.
-All dtype and shape values are assumed to be equal to the values of the
-first element in the DocumentArray / DocumentArrayMemmap</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> of blobs</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.mixins.content.ContentPropertyMixin.texts">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">texts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.mixins.content.ContentPropertyMixin.texts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get <a class="reference internal" href="../docarray.document/#docarray.document.Document.text" title="docarray.document.Document.text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">text</span></code></a> of all Documents</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a list of texts</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.mixins.content.ContentPropertyMixin.buffers">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">buffers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.mixins.content.ContentPropertyMixin.buffers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the buffer attribute of all Documents.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a list of buffers</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.mixins.content.ContentPropertyMixin.contents">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">contents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">DocumentContentType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ArrayType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.mixins.content.ContentPropertyMixin.contents" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the <a class="reference internal" href="../docarray.document.mixins.content/#docarray.document.mixins.content.ContentPropertyMixin.content" title="docarray.document.mixins.content.ContentPropertyMixin.content"><code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code></a> of all Documents.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a list of texts, buffers or <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-array-mixins-content-module">
+<h1>docarray.array.mixins.content module<a class="headerlink" href="#docarray-array-mixins-content-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -883,7 +804,7 @@ first element in the DocumentArray / DocumentArrayMemmap</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

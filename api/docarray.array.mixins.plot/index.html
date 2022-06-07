@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.array.mixins.reduce module" href="../docarray.array.mixins.reduce/" /><link rel="prev" title="docarray.array.mixins.parallel module" href="../docarray.array.mixins.parallel/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.array.mixins.plot module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,83 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.array.mixins.plot">
-<span id="docarray-array-mixins-plot-module"></span><h1>docarray.array.mixins.plot module<a class="headerlink" href="#module-docarray.array.mixins.plot" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.array.mixins.plot.PlotMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.mixins.plot.</span></span><span class="sig-name descname"><span class="pre">PlotMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/mixins/plot/#PlotMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.plot.PlotMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Helper functions for plotting the arrays.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.plot.PlotMixin.plot_embeddings">
-<span class="sig-name descname"><span class="pre">plot_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MyDocumentArray'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_sprites</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_image_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_server</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/plot/#PlotMixin.plot_embeddings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.plot.PlotMixin.plot_embeddings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Interactively visualize <a class="reference internal" href="../docarray.array.mixins.content/#docarray.array.mixins.content.ContentPropertyMixin.embeddings" title="docarray.array.mixins.content.ContentPropertyMixin.embeddings"><code class="xref py py-attr docutils literal notranslate"><span class="pre">embeddings</span></code></a> using the Embedding Projector.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>title</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the title of this visualization. If you want to compare multiple embeddings at the same time,
-make sure to give different names each time and set <code class="docutils literal notranslate"><span class="pre">path</span></code> to the same value.</p></li>
-<li><p><strong>port</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – if set, run the embedding-projector frontend at given port. Otherwise a random port is used.</p></li>
-<li><p><strong>image_sprites</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, visualize the dots using <a class="reference internal" href="../daemon.models.containers/#daemon.models.containers.ContainerMetadata.uri" title="daemon.models.containers.ContainerMetadata.uri"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uri</span></code></a> and <a class="reference internal" href="../docarray.document/#docarray.document.Document.blob" title="docarray.document.Document.blob"><code class="xref py py-attr docutils literal notranslate"><span class="pre">blob</span></code></a>.</p></li>
-<li><p><strong>path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if set, then append the visualization to an existing folder, where you can compare multiple
-embeddings at the same time. Make sure to use a different <code class="docutils literal notranslate"><span class="pre">title</span></code> each time .</p></li>
-<li><p><strong>min_image_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – only used when <cite>image_sprites=True</cite>. the minimum size of the image</p></li>
-<li><p><strong>channel_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – only used when <cite>image_sprites=True</cite>. the axis id of the color channel, <code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates the color channel info at the last axis</p></li>
-<li><p><strong>start_server</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, start a HTTP server and open the frontend directly. Otherwise, you need to rely on <code class="docutils literal notranslate"><span class="pre">return</span></code> path and serve by yourself.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the path to the embeddings visualization info.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.plot.PlotMixin.plot_embeddings_legacy">
-<span class="sig-name descname"><span class="pre">plot_embeddings_legacy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colored_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colormap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rainbow'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pca'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/plot/#PlotMixin.plot_embeddings_legacy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.plot.PlotMixin.plot_embeddings_legacy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot embeddings in a 2D projection with the PCA algorithm. This function requires <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> installed.</p>
-<p>If <cite>tag_name</cite> is provided the plot uses a distinct color for each unique tag value in the
-documents of the DocumentArray.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>output</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Optional path to store the visualization. If not given, show in UI</p></li>
-<li><p><strong>title</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Optional title of the plot. When not given, the default title is used.</p></li>
-<li><p><strong>colored_attr</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Optional str that specifies attribute used to color the plot, it supports dunder expression
-such as <cite>tags__label</cite>, <cite>matches__0__id</cite>.</p></li>
-<li><p><strong>colormap</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the colormap string supported by matplotlib.</p></li>
-<li><p><strong>method</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the visualization method, available <cite>pca</cite>, <cite>tsne</cite>. <cite>pca</cite> is fast but may not well represent
-nonlinear relationship of high-dimensional data. <cite>tsne</cite> requires scikit-learn to be installed and is
-much slower.</p></li>
-<li><p><strong>show_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If set, axis and bounding box of the plot will be printed.</p></li>
-<li><p><strong>kwargs</strong> – extra kwargs pass to matplotlib.plot</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.plot.PlotMixin.plot_image_sprites">
-<span class="sig-name descname"><span class="pre">plot_image_sprites</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">512</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/plot/#PlotMixin.plot_image_sprites"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.plot.PlotMixin.plot_image_sprites" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a sprite image for all image blobs in this DocumentArray-like object.</p>
-<p>An image sprite is a collection of images put into a single image. It is always square-sized.
-Each sub-image is also square-sized and equally-sized.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>output</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Optional path to store the visualization. If not given, show in UI</p></li>
-<li><p><strong>canvas_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the size of the canvas</p></li>
-<li><p><strong>min_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the minimum size of the image</p></li>
-<li><p><strong>channel_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the axis id of the color channel, <code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates the color channel info at the last axis</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-array-mixins-plot-module">
+<h1>docarray.array.mixins.plot module<a class="headerlink" href="#docarray-array-mixins-plot-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -879,7 +804,7 @@ Each sub-image is also square-sized and equally-sized.</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

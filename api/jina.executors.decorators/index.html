@@ -12,8 +12,6 @@
   
 <meta property="og:site_name" content="Jina 2.6.4-master Documentation" />
   
-<meta property="og:description" content="Decorators and wrappers designed for wrapping BaseExecutor functions." />
-  
 <meta property="og:image" content="https://docs.jina.ai/_static/banner.png" />
   
 <meta property="og:image:alt" content="Jina 2.6.4-master Documentation" />
@@ -38,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.executors.metas module" href="../jina.executors.metas/" /><link rel="prev" title="jina.executors package" href="../jina.executors/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.executors.decorators module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -770,50 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.executors.decorators">
-<span id="jina-executors-decorators-module"></span><h1>jina.executors.decorators module<a class="headerlink" href="#module-jina.executors.decorators" title="Permalink to this headline">¶</a></h1>
-<p>Decorators and wrappers designed for wrapping <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseExecutor</span></code> functions.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.executors.decorators.wrap_func">
-<span class="sig-prename descclassname"><span class="pre">jina.executors.decorators.</span></span><span class="sig-name descname"><span class="pre">wrap_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrapper</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/executors/decorators/#wrap_func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.executors.decorators.wrap_func" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wrapping a class method only once, inherited but not overridden method will not be wrapped again</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> – class</p></li>
-<li><p><strong>func_lst</strong> – function list to wrap</p></li>
-<li><p><strong>wrapper</strong> – the wrapper</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.executors.decorators.store_init_kwargs">
-<span class="sig-prename descclassname"><span class="pre">jina.executors.decorators.</span></span><span class="sig-name descname"><span class="pre">store_init_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/executors/decorators/#store_init_kwargs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.executors.decorators.store_init_kwargs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Mark the args and kwargs of <code class="xref py py-func docutils literal notranslate"><span class="pre">__init__()</span></code> later to be stored via <code class="xref py py-func docutils literal notranslate"><span class="pre">save_config()</span></code> in YAML
-:type func: <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>
-:param func: the function to decorate
-:rtype: <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>
-:return: the wrapped function</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.executors.decorators.requests">
-<span class="sig-prename descclassname"><span class="pre">jina.executors.decorators.</span></span><span class="sig-name descname"><span class="pre">requests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/executors/decorators/#requests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.executors.decorators.requests" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>@requests</cite> defines when a function will be invoked. It has a keyword <cite>on=</cite> to define the endpoint.</p>
-<p>A class method decorated with plan <cite>@requests</cite> (without <cite>on=</cite>) is the default handler for all endpoints.
-That means, it is the fallback handler for endpoints that are not found.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>func</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]], <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]]) – the method to decorate</p></li>
-<li><p><strong>on</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the endpoint string, by convention starts with <cite>/</cite></p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>decorated function</p>
-</dd>
-</dl>
-</dd></dl>
+                <section id="jina-executors-decorators-module">
+<h1>jina.executors.decorators module<a class="headerlink" href="#jina-executors-decorators-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -848,7 +804,7 @@ That means, it is the fallback handler for endpoints that are not found.</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

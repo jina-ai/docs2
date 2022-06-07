@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.memmap package" href="../docarray.memmap/" /><link rel="prev" title="docarray.math.evaluation module" href="../docarray.math.evaluation/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.math.helper module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,73 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.math.helper">
-<span id="docarray-math-helper-module"></span><h1>docarray.math.helper module<a class="headerlink" href="#module-docarray.math.helper" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.helper.minmax_normalize">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.helper.</span></span><span class="sig-name descname"><span class="pre">minmax_normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-07</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/helper/#minmax_normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.helper.minmax_normalize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Normalize values in <cite>x</cite> into <cite>t_range</cite>.</p>
-<p><cite>x</cite> can be a 1D array or a 2D array. When <cite>x</cite> is a 2D array, then normalization is row-based.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p>with <cite>t_range=(0, 1)</cite> will normalize the min-value of the data to 0, max to 1;</p></li>
-<li><p>with <cite>t_range=(1, 0)</cite> will normalize the min-value of the data to 1, max value of the data to 0.</p></li>
-</ul>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – the data to be normalized</p></li>
-<li><p><strong>t_range</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – a tuple represents the target range.</p></li>
-<li><p><strong>x_range</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>]) – a tuple represents x range.</p></li>
-<li><p><strong>eps</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – a small jitter to avoid divde by zero</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>normalized data in <cite>t_range</cite></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.helper.top_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.helper.</span></span><span class="sig-name descname"><span class="pre">top_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">descending</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/helper/#top_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.helper.top_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds values and indices of the k largest entries for the last dimension.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>values</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – array of distances</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of values to retrieve</p></li>
-<li><p><strong>descending</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – find top k biggest values</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>indices and distances</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.helper.update_rows_x_mat_best">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.helper.</span></span><span class="sig-name descname"><span class="pre">update_rows_x_mat_best</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_mat_best</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_inds_best</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_inds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/helper/#update_rows_x_mat_best"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.helper.update_rows_x_mat_best" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates <cite>x_mat_best</cite> and <cite>x_inds_best</cite> rows with the k best values and indices (per row)  from <cite>x_mat</cite> union <cite>x_mat_best</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x_mat</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – numpy array of the first matrix</p></li>
-<li><p><strong>x_inds</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – numpy array of the indices of the first matrix</p></li>
-<li><p><strong>x_mat_best</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – numpy array of the second matrix</p></li>
-<li><p><strong>x_inds_best</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – numpy array of the indices of the second matrix</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of values to retrieve</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>indices and distances</p>
-</dd>
-</dl>
-</dd></dl>
+                <section id="docarray-math-helper-module">
+<h1>docarray.math.helper module<a class="headerlink" href="#docarray-math-helper-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -869,7 +804,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

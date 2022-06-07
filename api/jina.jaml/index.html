@@ -38,13 +38,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.jaml.parsers package" href="../jina.jaml.parsers/" /><link rel="prev" title="jina.hubble.hubio module" href="../jina.hubble.hubio/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.jaml package - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -780,17 +780,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../jina.jaml.parsers/#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../jina.jaml.parsers.default/">jina.jaml.parsers.default package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.default/#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.default/#module-jina.jaml.parsers.default">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.default/#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../jina.jaml.parsers.executor/">jina.jaml.parsers.executor package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.executor/#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.executor/#module-jina.jaml.parsers.executor">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.executor/#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../jina.jaml.parsers.flow/">jina.jaml.parsers.flow package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.flow/#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.flow/#module-jina.jaml.parsers.flow">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../jina.jaml.parsers.flow/#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -799,7 +799,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../jina.jaml.parsers.base/">jina.jaml.parsers.base module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../jina.jaml.parsers/#module-jina.jaml.parsers">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jina.jaml.parsers/#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -813,320 +813,8 @@
 </ul>
 </div>
 </section>
-<section id="module-jina.jaml">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-jina.jaml" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.jaml.JAML">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.jaml.</span></span><span class="sig-name descname"><span class="pre">JAML</span></span><a class="reference internal" href="../../_modules/jina/jaml/#JAML"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A Jina YAML parser supports loading and dumping and substituting variables.</p>
-<p>To use it:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jina.jaml</span> <span class="kn">import</span> <span class="n">JAML</span>
-
-<span class="n">JAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="n">JAML</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">DummyClass</span><span class="p">:</span>
-    <span class="k">pass</span>
-
-<span class="n">JAML</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">DummyClass</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You can use expressions to programmatically set variables in YAML files and access contexts.
-An expression can be any combination of literal values, references to a context, or functions.
-You can combine literals, context references, and functions using operators.</p>
-<p>You need to use specific syntax to tell Jina to evaluate an expression rather than treat it as a string.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">${{ &lt;expression&gt; }}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>To evaluate (i.e. substitute the value to the real value)
-the expression when loading, use <code class="xref py py-meth docutils literal notranslate"><span class="pre">load(substitute=True)()</span></code>.</p>
-<p>To substitute the value based on a dict,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">JAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">substitute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">context</span><span class="o">=</span><span class="p">{</span><span class="s1">'context_var'</span><span class="p">:</span> <span class="mf">3.14</span><span class="p">,</span>
-                            <span class="s1">'context_var2'</span><span class="p">:</span> <span class="s1">'hello-world'</span><span class="p">})</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFlow</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseExecutor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDriver</span></code>
-and all their subclasses have already implemented JAML interfaces,
-to load YAML config into objects, please use <code class="xref py py-meth docutils literal notranslate"><span class="pre">Flow.load_config()</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseExecutor.load_config()</span></code>, etc.</p>
-</div>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.load">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substitute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.load" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parse the first YAML document in a stream and produce the corresponding Python object.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFlow</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseExecutor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDriver</span></code>
-and all their subclasses have already implemented JAML interfaces,
-to load YAML config into objects, please use <code class="xref py py-meth docutils literal notranslate"><span class="pre">Flow.load_config()</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseExecutor.load_config()</span></code>, etc.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>substitute</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – substitute environment, internal reference and context variables.</p></li>
-<li><p><strong>context</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]) – context replacement variables in a dict, the value of the dict is the replacement.</p></li>
-<li><p><strong>stream</strong> – the stream to load</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the Python object</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.escape">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_unknown_tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.escape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.escape" title="Permalink to this definition">¶</a></dt>
-<dd><p>Escape the YAML content by replacing all customized tags <code class="docutils literal notranslate"><span class="pre">!</span></code> to <a href="#id1"><span class="problematic" id="id2">``</span></a>jtype: <a href="#id3"><span class="problematic" id="id4">``</span></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the original YAML content</p></li>
-<li><p><strong>include_unknown_tags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if to include unknown tags during escaping</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>escaped YAML</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.unescape">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unescape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_unknown_tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jtype_whitelist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.unescape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.unescape" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unescape the YAML content by replacing all <a href="#id5"><span class="problematic" id="id6">``</span></a>jtype: `` to tags.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the escaped YAML content</p></li>
-<li><p><strong>include_unknown_tags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if to include unknown tags during unescaping</p></li>
-<li><p><strong>jtype_whitelist</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, …]]) – the list of jtype to be unescaped</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>unescaped YAML</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.registered_tags">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">registered_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.registered_tags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.registered_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of <a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a> classes that have been registered.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>tags</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.registered_classes">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">registered_classes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.registered_classes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.registered_classes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dict of tags and <a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a> classes that have been registered.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>tags and classes</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.cls_from_tag">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cls_from_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.cls_from_tag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.cls_from_tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch class from yaml tag</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tag</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – yaml tag</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a>]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>class object from tag</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.load_no_tags">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_no_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.load_no_tags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.load_no_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load yaml object but ignore all customized tags, e.g. !Executor, !Driver, !Flow.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>stream</strong> – the output stream</p></li>
-<li><p><strong>kwargs</strong> – other kwargs</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the Python object</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.expand_dict">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expand_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_cycle_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_passes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.expand_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.expand_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Expand variables from YAML file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>d</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>) – yaml file loaded as python dict</p></li>
-<li><p><strong>context</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleNamespace</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – context replacement variables in a dict, the value of the dict is the replacement.</p></li>
-<li><p><strong>resolve_cycle_ref</strong> – resolve internal reference if True.</p></li>
-<li><p><strong>resolve_passes</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of rounds to resolve internal reference.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>expanded dict.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.dump">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.dump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.dump" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialize a Python object into a YAML stream.</p>
-<p>If stream is None, return the produced string instead.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> – the data to serialize</p></li>
-<li><p><strong>stream</strong> – the output stream</p></li>
-<li><p><strong>kwargs</strong> – other kwargs</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the yaml output</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAML.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAML.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAML.register" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a class for dumping loading.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>if it has attribute yaml_tag use that to register, else use class name</p></li>
-<li><p>if it has methods to_yaml/from_yaml use those to dump/load else dump attributes
-as mapping</p></li>
-</ul>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cls</strong> – the class to register</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the registered class</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.jaml.JAMLCompatible">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.jaml.</span></span><span class="sig-name descname"><span class="pre">JAMLCompatible</span></span><a class="reference internal" href="../../_modules/jina/jaml/#JAMLCompatible"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAMLCompatible" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p><a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a> is a mixin class designed to be used with multiple inheritance.</p>
-<p>It will add <code class="xref py py-meth docutils literal notranslate"><span class="pre">to_yaml()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">from_yaml()</span></code> to the target class,
-making that class JAML-friendly.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For the sake of cooperative multiple inheritance, do NOT implement <code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code> for this class</p>
-</div>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAMLCompatible.save_config">
-<span class="sig-name descname"><span class="pre">save_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAMLCompatible.save_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAMLCompatible.save_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save the object’s config into a YAML file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filename</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – file path of the yaml file, if not given then <code class="xref py py-attr docutils literal notranslate"><span class="pre">config_abspath</span></code> is used</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAMLCompatible.load_config">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_py_modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substitute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uses_with</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uses_metas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uses_requests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_search_paths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAMLCompatible.load_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAMLCompatible.load_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A high-level interface for loading configuration with features
-of loading extra py_modules, substitute env &amp; context variables. Any class that
-implements <a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a> mixin can enjoy this feature, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFlow</span></code>,
-<code class="xref py py-class docutils literal notranslate"><span class="pre">BaseExecutor</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDriver</span></code> and all their subclasses.</p>
-<dl class="simple">
-<dt>Support substitutions in YAML:</dt><dd><ul class="simple">
-<li><p>Environment variables: <cite>${{ENV.VAR}}</cite> (recommended), <code class="docutils literal notranslate"><span class="pre">${{VAR}}</span></code>.</p></li>
-<li><p>Context dict (<code class="docutils literal notranslate"><span class="pre">context</span></code>): <a href="#id7"><span class="problematic" id="id8">``</span></a>${{VAR}}``(recommended).</p></li>
-<li><p>Internal reference via <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">root</span></code>: <code class="docutils literal notranslate"><span class="pre">${{this.same_level_key}}</span></code>, <code class="docutils literal notranslate"><span class="pre">${{root.root_level_key}}</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>Substitutions are carried in the order and multiple passes to resolve variables with best effort.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="kt">!BaseEncoder</span><span class="w"></span>
-<span class="nt">metas</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{VAR_A}}</span><span class="w">  </span><span class="c1"># env or context variables</span><span class="w"></span>
-<span class="w">    </span><span class="nt">workspace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-${{this.name}}</span><span class="w">  </span><span class="c1"># internal reference</span><span class="w"></span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># load Executor from yaml file</span>
-<span class="n">BaseExecutor</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="s1">'a.yml'</span><span class="p">)</span>
-
-<span class="c1"># load Executor from yaml file and substitute environment variables</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'VAR_A'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'hello-world'</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">BaseExecutor</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="s1">'a.yml'</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">b</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
-
-<span class="c1"># load Executor from yaml file and substitute variables from a dict</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">BaseExecutor</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="s1">'a.yml'</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="p">{</span><span class="s1">'VAR_A'</span><span class="p">:</span> <span class="s1">'hello-world'</span><span class="p">})</span>
-<span class="k">assert</span> <span class="n">b</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
-
-<span class="c1"># disable substitute</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">BaseExecutor</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="s1">'a.yml'</span><span class="p">,</span> <span class="n">substitute</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TextIO</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – the multi-kind source of the configs.</p></li>
-<li><p><strong>allow_py_modules</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – allow importing plugins specified by <code class="docutils literal notranslate"><span class="pre">py_modules</span></code> in YAML at any levels</p></li>
-<li><p><strong>substitute</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – substitute environment, internal reference and context variables.</p></li>
-<li><p><strong>context</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]) – context replacement variables in a dict, the value of the dict is the replacement.</p></li>
-<li><p><strong>uses_with</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – dictionary of parameters to overwrite from the default config’s with field</p></li>
-<li><p><strong>uses_metas</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – dictionary of parameters to overwrite from the default config’s metas field</p></li>
-<li><p><strong>uses_requests</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – dictionary of parameters to overwrite from the default config’s requests field</p></li>
-<li><p><strong>extra_search_paths</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – extra paths used when looking for executor yaml files</p></li>
-<li><p><strong>kwargs</strong> – kwargs for parse_config_source</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">JAMLCompatible</span></code></a> object</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.jaml.JAMLCompatible.is_valid_jaml">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_valid_jaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/jaml/#JAMLCompatible.is_valid_jaml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.jaml.JAMLCompatible.is_valid_jaml" title="Permalink to this definition">¶</a></dt>
-<dd><p>Verifies the yaml syntax of a given object by first serializing it and attempting to deserialize and catch
-parser errors
-:type obj: <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>
-:param obj: yaml object
-:rtype: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
-:return: whether the syntax is valid or not</p>
-</dd></dl>
-</dd></dl>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
@@ -1162,7 +850,7 @@ parser errors
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
@@ -1190,7 +878,7 @@ parser errors
 <li><a class="reference internal" href="#">jina.jaml package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-jina.jaml">Module contents</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

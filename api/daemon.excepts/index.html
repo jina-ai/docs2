@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="daemon.files module" href="../daemon.files/" /><link rel="prev" title="daemon.dockerize module" href="../daemon.dockerize/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>daemon.excepts module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,157 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-daemon.excepts">
-<span id="daemon-excepts-module"></span><h1>daemon.excepts module<a class="headerlink" href="#module-daemon.excepts" title="Permalink to this headline">¶</a></h1>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.DockerNotFoundException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">DockerNotFoundException</span></span><a class="reference internal" href="../../_modules/daemon/excepts/#DockerNotFoundException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.DockerNotFoundException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exception if docker client cannot communicate with dockerd</p>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.DockerImageException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">DockerImageException</span></span><a class="reference internal" href="../../_modules/daemon/excepts/#DockerImageException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.DockerImageException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exception while handling a docker image in the workspace</p>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.DockerNetworkException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">DockerNetworkException</span></span><a class="reference internal" href="../../_modules/daemon/excepts/#DockerNetworkException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.DockerNetworkException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exception while handling docker networks in the workspace</p>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.DockerContainerException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">DockerContainerException</span></span><a class="reference internal" href="../../_modules/daemon/excepts/#DockerContainerException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.DockerContainerException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exception while handling a docker container in the workspace</p>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.Runtime400Exception">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">Runtime400Exception</span></span><a class="reference internal" href="../../_modules/daemon/excepts/#Runtime400Exception"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.Runtime400Exception" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exception for all errors in Daemon</p>
-<ul class="simple">
-<li><p>Should only be used in <cite>api/endpoints/*.py</cite>.</p></li>
-<li><p>Should always be chained.</p></li>
-<li><p>Handled by <cite>daemon_runtime_exception_handler</cite></p></li>
-</ul>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.PartialDaemon400Exception">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">PartialDaemon400Exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/excepts/#PartialDaemon400Exception"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.PartialDaemon400Exception" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exception for all errors in Partial Daemon</p>
-<p>This can be raised from 2 places:
-1. Inside partial daemon:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Should always be chained and raised in <cite>a[i/partial/endpoints/*.py</cite>.</p></li>
-<li><p>This way it has a <cite>__cause__</cite> and stacktrace can be retrieved in <cite>partial_daemon_exception_handler</cite></p></li>
-</ul>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>Inside main store:
-- Should be raised whenever main-daemon receives a 400 from partial-daemon.
-- Don’t chain it. Raise it like - <cite>PartialDaemon400Exception(‘original traceback’)</cite>
-- Gets handled via <cite>daemon_runtime_exception_handler</cite> when chained with <cite>Runtime400Exception</cite></p></li>
-</ol>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="daemon.excepts.PartialDaemonConnectionException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">PartialDaemonConnectionException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/excepts/#PartialDaemonConnectionException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.PartialDaemonConnectionException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#daemon.excepts.PartialDaemon400Exception" title="daemon.excepts.PartialDaemon400Exception"><code class="xref py py-class docutils literal notranslate"><span class="pre">daemon.excepts.PartialDaemon400Exception</span></code></a></p>
-<p>Exception if JinaD cannot connect to Partial Daemon</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.excepts.json_response">
-<span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">json_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/excepts/#json_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.json_response" title="Permalink to this definition">¶</a></dt>
-<dd><p>json response from status, detail &amp; body</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>status_code</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPStatus</span></code>) – http status code</p></li>
-<li><p><strong>detail</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – exception name in detail</p></li>
-<li><p><strong>body</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – error stacktrace</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONResponse</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>JSONResponse object</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.excepts.partial_daemon_exception_handler">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">partial_daemon_exception_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/excepts/#partial_daemon_exception_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.partial_daemon_exception_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception handler for all PartialDaemon400Exceptions</p>
-<p>Since <cite>PartialDaemon400Exception</cite> is always chained, we access the <cite>__cause__</cite> and send that as <cite>body</cite>.</p>
-<p>This handler makes sure, in case of exceptions (Pea/Pod/Flow start/update/delete failures),
-the response from Partial Daemon whould always look like -
-<a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>{</p>
-<blockquote>
-<div><p>“detail”: “PartialDaemon400Exception”,
-“body”: [</p>
-<blockquote>
-<div><p>“stack trace line1”
-“stack trace line2:</p>
-</div></blockquote>
-<p>]</p>
-</div></blockquote>
-<p>}```</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>request</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code>) – starlette request</p></li>
-<li><p><strong>ex</strong> (<a class="reference internal" href="#daemon.excepts.PartialDaemon400Exception" title="daemon.excepts.PartialDaemon400Exception"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartialDaemon400Exception</span></code></a>) – actual PartialDaemon400Exception</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>json response representing the error</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.excepts.daemon_runtime_exception_handler">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">daemon_runtime_exception_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/excepts/#daemon_runtime_exception_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.daemon_runtime_exception_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception handler for all Runtime400Exceptions</p>
-<p><cite>Runtime400Exception</cite> is always chained.</p>
-<ul class="simple">
-<li><p>When <cite>__cause__</cite> is <cite>PartialDaemon400Exception</cite>, we know, it is due to an error inside the
-Partial Daemon container and <cite>ex.message</cite> carries the actual stack trace.</p></li>
-<li><p>All other errors are inside the main Daemon itself, so we get the stack trace using traceback.</p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>request</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code>) – starlette request</p></li>
-<li><p><strong>ex</strong> (<a class="reference internal" href="#daemon.excepts.Runtime400Exception" title="daemon.excepts.Runtime400Exception"><code class="xref py py-class docutils literal notranslate"><span class="pre">Runtime400Exception</span></code></a>) – actual Runtime400Exception</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>json response representing the error</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="daemon.excepts.validation_exception_handler">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">daemon.excepts.</span></span><span class="sig-name descname"><span class="pre">validation_exception_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/daemon/excepts/#validation_exception_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#daemon.excepts.validation_exception_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception handler for all RequestValidationError raised by pydantic</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>request</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code>) – starlette request</p></li>
-<li><p><strong>ex</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">RequestValidationError</span></code>) – actual Validation exception</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>json response representing the error</p>
-</dd>
-</dl>
-</dd></dl>
+                <section id="daemon-excepts-module">
+<h1>daemon.excepts module<a class="headerlink" href="#daemon-excepts-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -953,7 +804,7 @@ Partial Daemon container and <cite>ex.message</cite> carries the actual stack tr
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

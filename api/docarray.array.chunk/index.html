@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.array.document module" href="../docarray.array.document/" /><link rel="prev" title="docarray.array.mixins.traverse module" href="../docarray.array.mixins.traverse/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.array.chunk module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,99 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.array.chunk">
-<span id="docarray-array-chunk-module"></span><h1>docarray.array.chunk module<a class="headerlink" href="#module-docarray.array.chunk" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.chunk.</span></span><span class="sig-name descname"><span class="pre">ChunkArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc_views</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_doc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/chunk/#ChunkArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.chunk.ChunkArray" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.document.DocumentArray</span></code></a></p>
-<p><a class="reference internal" href="#docarray.array.chunk.ChunkArray" title="docarray.array.chunk.ChunkArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChunkArray</span></code></a> inherits from <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code>.
-It’s a subset of Documents.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>doc_views</strong> – Set of sub-documents (i.e chunks) of <cite>reference_doc</cite></p></li>
-<li><p><strong>reference_doc</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><em>Document</em></a>) – Reference <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> for the sub-documents</p></li>
-</ul>
-</dd>
-</dl>
-<p>Set constructor method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>doc_views</strong> – protobuf representation of the chunks</p></li>
-<li><p><strong>reference_doc</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><em>Document</em></a>) – parent document</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray.append">
-<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/chunk/#ChunkArray.append"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.chunk.ChunkArray.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a sub-document (i.e chunk) to the current Document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>document</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><em>Document</em></a>) – Sub-document to be appended</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Comparing to <code class="xref py py-attr docutils literal notranslate"><span class="pre">DocumentArray.append()</span></code>, this method adds more safeguard to
-make sure the added chunk is legit.</p>
-</div>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray.extend">
-<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/chunk/#ChunkArray.extend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.chunk.ChunkArray.extend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extend the <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code> by appending all the items from the iterable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>iterable</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]) – the iterable of Documents to extend this array with</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray.reference_doc">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reference_doc</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><span class="pre">Document</span></a></em><a class="headerlink" href="#docarray.array.chunk.ChunkArray.reference_doc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the document that <a class="reference internal" href="#docarray.array.chunk.ChunkArray" title="docarray.array.chunk.ChunkArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChunkArray</span></code></a> belongs to.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document">Document</a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>reference doc</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray.granularity">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">granularity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.chunk.ChunkArray.granularity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get granularity of all document in this array.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>granularity</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray.adjacency">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">adjacency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.chunk.ChunkArray.adjacency" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get adjacency of all document in this array.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>adjacency</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-array-chunk-module">
+<h1>docarray.array.chunk module<a class="headerlink" href="#docarray-array-chunk-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -895,7 +804,7 @@ make sure the added chunk is legit.</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

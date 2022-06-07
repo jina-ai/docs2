@@ -12,7 +12,7 @@
   
 <meta property="og:site_name" content="Jina 2.6.4-master Documentation" />
   
-<meta property="og:description" content="Submodules: jina.clients.base.grpc module, jina.clients.base.helper module, jina.clients.base.http module, jina.clients.base.websocket module. Module contents: Module containing the Base Client for Jina." />
+<meta property="og:description" content="Submodules: jina.clients.base.grpc module, jina.clients.base.helper module, jina.clients.base.http module, jina.clients.base.websocket module. Module contents:" />
   
 <meta property="og:image" content="https://docs.jina.ai/_static/banner.png" />
   
@@ -38,13 +38,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.clients.base.grpc module" href="../jina.clients.base.grpc/" /><link rel="prev" title="jina.clients package" href="../jina.clients/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.clients.base package - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -783,66 +783,8 @@
 </ul>
 </div>
 </section>
-<section id="module-jina.clients.base">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-jina.clients.base" title="Permalink to this headline">¶</a></h2>
-<p>Module containing the Base Client for Jina.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.clients.base.BaseClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.clients.base.</span></span><span class="sig-name descname"><span class="pre">BaseClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/clients/base/#BaseClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.clients.base.BaseClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
-<p>A base client for connecting to the Flow Gateway.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>args</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code>]) – the Namespace from argparse</p></li>
-<li><p><strong>kwargs</strong> – additional parameters that can be accepted by client parser</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.clients.base.BaseClient.check_input">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/clients/base/#BaseClient.check_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.clients.base.BaseClient.check_input" title="Permalink to this definition">¶</a></dt>
-<dd><p>Validate the inputs and print the first request if success.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]) – the inputs</p></li>
-<li><p><strong>kwargs</strong> – keyword arguments</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.clients.base.BaseClient.inputs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">InputType</span></em><a class="headerlink" href="#jina.clients.base.BaseClient.inputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>An iterator of bytes, each element represents a Document’s raw content.</p>
-<p><code class="docutils literal notranslate"><span class="pre">inputs</span></code> defined in the protobuf</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>InputType</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>inputs</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.clients.base.BaseClient.client">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">jina.helper.T</span></em><a class="headerlink" href="#jina.clients.base.BaseClient.client" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the client object itself</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>~T</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the Client object</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
@@ -878,7 +820,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
@@ -905,7 +847,7 @@
                         <ul>
 <li><a class="reference internal" href="#">jina.clients.base package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-jina.clients.base">Module contents</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.optimizers.parameters module" href="../jina.optimizers.parameters/" /><link rel="prev" title="jina.optimizers.discovery module" href="../jina.optimizers.discovery/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.optimizers.flow_runner module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,99 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.optimizers.flow_runner">
-<span id="jina-optimizers-flow-runner-module"></span><h1>jina.optimizers.flow_runner module<a class="headerlink" href="#module-jina.optimizers.flow_runner" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.flow_runner.FlowRunner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.flow_runner.</span></span><span class="sig-name descname"><span class="pre">FlowRunner</span></span><a class="reference internal" href="../../_modules/jina/optimizers/flow_runner/#FlowRunner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.flow_runner.FlowRunner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../jina.jaml/#jina.jaml.JAMLCompatible" title="jina.jaml.JAMLCompatible"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.jaml.JAMLCompatible</span></code></a></p>
-<p>An abstract FlowRunner object in Jina.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.flow_runner.FlowRunner.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'workspace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/flow_runner/#FlowRunner.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.flow_runner.FlowRunner.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs the defined Flow(s).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>trial_parameters</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – Parameters to be used as context</p></li>
-<li><p><strong>workspace</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Directory to be used for the flows</p></li>
-<li><p><strong>callback</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]]) – Callback that will be called by the Flows. Should store the evaluation results.</p></li>
-<li><p><strong>kwargs</strong> – Further arguments passed to the Flow(s) as <cite>context</cite></p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>NotImplementedError</strong> – <a class="reference internal" href="#jina.optimizers.flow_runner.FlowRunner" title="jina.optimizers.flow_runner.FlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlowRunner</span></code></a> is just an interface. Please use any implemented subclass.</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.flow_runner.SingleFlowRunner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.flow_runner.</span></span><span class="sig-name descname"><span class="pre">SingleFlowRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">documents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execution_endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite_workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/flow_runner/#SingleFlowRunner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.flow_runner.SingleFlowRunner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#jina.optimizers.flow_runner.FlowRunner" title="jina.optimizers.flow_runner.FlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.optimizers.flow_runner.FlowRunner</span></code></a></p>
-<p><a class="reference internal" href="#jina.optimizers.flow_runner.SingleFlowRunner" title="jina.optimizers.flow_runner.SingleFlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleFlowRunner</span></code></a> enables running a flow repeadetly with different <cite>context</cite>.</p>
-<p><cite>documents</cite> maps to a parameter of the <cite>execution_endpoint</cite>, depending on the method.
-If you use a generator function/list as <cite>documents</cite>, the default will work out of the box.
-Otherwise, the following settings will work:</p>
-<p>For more reasonable values, have a look at the <code class="xref py py-class docutils literal notranslate"><span class="pre">Flow</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>flow_yaml</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Path to Flow yaml</p></li>
-<li><p><strong>documents</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Input parameter for <cite>execution_endpoint</cite> for iterating documents.
-(e.g. a list of documents for <cite>index</cite> or a .jsonlines file for <cite>index_lines</cite>)</p></li>
-<li><p><strong>request_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Request size used in the flow</p></li>
-<li><p><strong>execution_endpoint</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The endpoint, <cite>f.post(on=)</cite> should point to</p></li>
-<li><p><strong>overwrite_workspace</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – True, means workspace created by the Flow will be overwritten with each execution.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>TypeError</strong> – When the documents are neither a <cite>str</cite> nor an <cite>Iterable</cite></p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.flow_runner.SingleFlowRunner.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'workspace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/flow_runner/#SingleFlowRunner.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.flow_runner.SingleFlowRunner.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Running method of <a class="reference internal" href="#jina.optimizers.flow_runner.SingleFlowRunner" title="jina.optimizers.flow_runner.SingleFlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleFlowRunner</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>trial_parameters</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – parameters that need to be tried</p></li>
-<li><p><strong>workspace</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path of workspace</p></li>
-<li><p><strong>callback</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]]) – callback function</p></li>
-<li><p><strong>kwargs</strong> – keyword argument</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.optimizers.flow_runner.MultiFlowRunner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.optimizers.flow_runner.</span></span><span class="sig-name descname"><span class="pre">MultiFlowRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flows</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/flow_runner/#MultiFlowRunner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.flow_runner.MultiFlowRunner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#jina.optimizers.flow_runner.FlowRunner" title="jina.optimizers.flow_runner.FlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.optimizers.flow_runner.FlowRunner</span></code></a></p>
-<p><a class="reference internal" href="#jina.optimizers.flow_runner.MultiFlowRunner" title="jina.optimizers.flow_runner.MultiFlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiFlowRunner</span></code></a> chains and runs multiple Flows.
-It is an interface for common patterns like IndexFlow -&gt; SearchFlow.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>flows</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#jina.optimizers.flow_runner.FlowRunner" title="jina.optimizers.flow_runner.FlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlowRunner</span></code></a>]) – Flows to be executed in sequence.</p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.optimizers.flow_runner.MultiFlowRunner.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'workspace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/optimizers/flow_runner/#MultiFlowRunner.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.optimizers.flow_runner.MultiFlowRunner.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Running method of <a class="reference internal" href="#jina.optimizers.flow_runner.MultiFlowRunner" title="jina.optimizers.flow_runner.MultiFlowRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiFlowRunner</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>trial_parameters</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – parameters need to be tried</p></li>
-<li><p><strong>workspace</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path of workspace</p></li>
-<li><p><strong>callback</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]]) – callback function</p></li>
-<li><p><strong>kwargs</strong> – keyword argument</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="jina-optimizers-flow-runner-module">
+<h1>jina.optimizers.flow_runner module<a class="headerlink" href="#jina-optimizers-flow-runner-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -895,7 +804,7 @@ It is an interface for common patterns like IndexFlow -&gt; SearchFlow.</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

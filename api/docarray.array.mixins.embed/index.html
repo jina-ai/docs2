@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.array.mixins.empty module" href="../docarray.array.mixins.empty/" /><link rel="prev" title="docarray.array.mixins.content module" href="../docarray.array.mixins.content/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.array.mixins.embed module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,58 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.array.mixins.embed">
-<span id="docarray-array-mixins-embed-module"></span><h1>docarray.array.mixins.embed module<a class="headerlink" href="#module-docarray.array.mixins.embed" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.array.mixins.embed.EmbedMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.mixins.embed.</span></span><span class="sig-name descname"><span class="pre">EmbedMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/mixins/embed/#EmbedMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.embed.EmbedMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Helper functions for embedding with a model</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.array.mixins.embed.EmbedMixin.embed">
-<span class="sig-name descname"><span class="pre">embed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_numpy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/embed/#EmbedMixin.embed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.embed.EmbedMixin.embed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fill <a class="reference internal" href="../docarray.document/#docarray.document.Document.embedding" title="docarray.document.Document.embedding"><code class="xref py py-attr docutils literal notranslate"><span class="pre">embedding</span></code></a> of Documents inplace by using <cite>embed_model</cite></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>embed_model</strong> (<em>AnyDNN</em>) – the embedding model written in Keras/Pytorch/Paddle</p></li>
-<li><p><strong>device</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the computational device for <cite>embed_model</cite>, can be either
-<cite>cpu</cite> or <cite>cuda</cite>.</p></li>
-<li><p><strong>batch_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of Documents in a batch for embedding</p></li>
-<li><p><strong>to_numpy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if to store embeddings back to Document in <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> or original framework format.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>T</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>itself after modified.</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.array.mixins.embed.get_framework">
-<span class="sig-prename descclassname"><span class="pre">docarray.array.mixins.embed.</span></span><span class="sig-name descname"><span class="pre">get_framework</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dnn_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/embed/#get_framework"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.mixins.embed.get_framework" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the framework that powers a DNN model.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is not a solid implementation. It is based on <code class="docutils literal notranslate"><span class="pre">__module__</span></code> name,
-the key idea is to tell <code class="docutils literal notranslate"><span class="pre">dnn_model</span></code> without actually importing the
-framework.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dnn_model</strong> – a DNN model</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>keras</cite>, <cite>torch</cite>, <cite>paddle</cite> or ValueError</p>
-</dd>
-</dl>
-</dd></dl>
+                <section id="docarray-array-mixins-embed-module">
+<h1>docarray.array.mixins.embed module<a class="headerlink" href="#docarray-array-mixins-embed-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -854,7 +804,7 @@ framework.</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

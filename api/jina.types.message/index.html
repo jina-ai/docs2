@@ -38,13 +38,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.types.message.common module" href="../jina.types.message.common/" /><link rel="prev" title="jina.types package" href="../jina.types/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.types.message package - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -780,225 +780,8 @@
 </ul>
 </div>
 </section>
-<section id="module-jina.types.message">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-jina.types.message" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.types.message.Message">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.types.message.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">envelope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p><a class="reference internal" href="#jina.types.message.Message" title="jina.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> is one of the <strong>primitive data type</strong> in Jina.</p>
-<p>It offers a Pythonic interface to allow users access and manipulate
-<code class="xref py py-class docutils literal notranslate"><span class="pre">jina.jina_pb2.MessageProto</span></code> object without working with Protobuf itself.</p>
-<p>A container class for <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.MessageProto</span></code>. Note, the Protobuf version of <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.MessageProto</span></code>
-contains a <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.EnvelopeProto</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.RequestProto</span></code>. Here, it contains:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.EnvelopeProto</span></code> object</p></li>
-<li><dl class="simple">
-<dt>and one of:</dt><dd><ul>
-<li><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code> object wrapping <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.RequestProto</span></code></p></li>
-<li><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.RequestProto</span></code> object</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-<p>It provide a generic view of as <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.MessageProto</span></code>, allowing one to access its member, request
-and envelope as if using <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.MessageProto</span></code> object directly.</p>
-<p>This class also collected all helper functions related to <code class="xref py py-class docutils literal notranslate"><span class="pre">jina_pb2.MessageProto</span></code> into one place.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>envelope</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">EnvelopeProto</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – Represents a Envelope, a part of the Message.</p></li>
-<li><p><strong>request</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RequestProto</span></code>]) – Represents a Request</p></li>
-<li><p><strong>args</strong> – Additional positional arguments.</p></li>
-<li><p><strong>kwargs</strong> – Additional keyword arguments.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.message.Message.from_proto">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_proto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message.from_proto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message.from_proto" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new Message object from a given <code class="xref py py-class docutils literal notranslate"><span class="pre">MessageProto</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>msg</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">MessageProto</span></code>) – the to-be-copied message</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the new message object</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.request">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../jina.types.request/#jina.types.request.Request" title="jina.types.request.Request"><span class="pre">jina.types.request.Request</span></a></em><a class="headerlink" href="#jina.types.message.Message.request" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../jina.types.request/#jina.types.request.Request" title="jina.types.request.Request"><code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code></a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>request</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.proto">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">proto</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">jina_pb2.MessageProto</span></em><a class="headerlink" href="#jina.types.message.Message.proto" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the RequestProto.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageProto</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>protobuf object</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.is_data_request">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_data_request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#jina.types.message.Message.is_data_request" title="Permalink to this definition">¶</a></dt>
-<dd><p>check if the request is not a control request</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">request</span></code> change the type, e.g. by leveraging the feature of <code class="docutils literal notranslate"><span class="pre">oneof</span></code>, this
-property wont be updated. This is not considered as a good practice.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>boolean which states if data is requested</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.message.Message.dump">
-<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message.dump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message.dump" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the message in a list of bytes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>array, containing encoded receiver id, serialized envelope and the compressed serialized envelope</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.colored_route">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colored_route</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#jina.types.message.Message.colored_route" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the string representation of the routes in a message.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>colored route</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.message.Message.add_route">
-<span class="sig-name descname"><span class="pre">add_route</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message.add_route"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message.add_route" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a route to the envelope.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the name of the pod service</p></li>
-<li><p><strong>identity</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the identity of the pod service</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#jina.types.message.Message.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the size in bytes.</p>
-<p>To get the latest size, use it after <a class="reference internal" href="#jina.types.message.Message.dump" title="jina.types.message.Message.dump"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dump()</span></code></a>
-:return: size of the message</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.message.Message.update_timestamp">
-<span class="sig-name descname"><span class="pre">update_timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message.update_timestamp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message.update_timestamp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the timestamp of the last route</p>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.response">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../jina.types.request/#jina.types.request.Request" title="jina.types.request.Request"><span class="pre">jina.types.request.Request</span></a></em><a class="headerlink" href="#jina.types.message.Message.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the response of the message in protobuf.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This should be only called at Gateway</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../jina.types.request/#jina.types.request.Request" title="jina.types.request.Request"><code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code></a></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>request object which contains the response</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.message.Message.merge_envelope_from">
-<span class="sig-name descname"><span class="pre">merge_envelope_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msgs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message.merge_envelope_from"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message.merge_envelope_from" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extend the current envelope routes with :param: <cite>msgs</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>msgs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#jina.types.message.Message" title="jina.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>]) – List of msgs.</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="jina.types.message.Message.add_exception">
-<span class="sig-name descname"><span class="pre">add_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/types/message/#Message.add_exception"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.types.message.Message.add_exception" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add exception to the last route in the envelope</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ex</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]) – Exception to be added</p></li>
-<li><p><strong>executor</strong> (<a class="reference internal" href="../jina.executors/#jina.executors.BaseExecutor" title="jina.executors.BaseExecutor"><em>BaseExecutor</em></a>) – Executor related to the exception</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.is_error">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_error</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#jina.types.message.Message.is_error" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return if the envelope status is ERROR.</p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">return</dt>
-<dd class="field-odd"><p>boolean stating if the status code of the envelope is error</p>
-</dd>
-</dl>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="jina.types.message.Message.is_ready">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_ready</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#jina.types.message.Message.is_ready" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return if the envelope status is READY.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>boolean stating if the status code of the envelope is ready</p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
@@ -1034,7 +817,7 @@ property wont be updated. This is not considered as a good practice.</p>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
@@ -1061,7 +844,7 @@ property wont be updated. This is not considered as a good practice.</p>
                         <ul>
 <li><a class="reference internal" href="#">jina.types.message package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-jina.types.message">Module contents</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

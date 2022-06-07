@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.helloworld.fashion.my_executors module" href="../jina.helloworld.fashion.my_executors/" /><link rel="prev" title="jina.helloworld.fashion.app module" href="../jina.helloworld.fashion.app/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.helloworld.fashion.helper module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,101 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.helloworld.fashion.helper">
-<span id="jina-helloworld-fashion-helper-module"></span><h1>jina.helloworld.fashion.helper module<a class="headerlink" href="#module-jina.helloworld.fashion.helper" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.index_generator">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">index_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_docs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#index_generator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.index_generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate the index data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>num_docs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of documents to be indexed.</p></li>
-<li><p><strong>target</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – Dictionary which stores the data paths</p></li>
-</ul>
-</dd>
-<dt class="field-even">Yields</dt>
-<dd class="field-even"><p>index data</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.query_generator">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">query_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_docs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_groundtruth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#query_generator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.query_generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate the query data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>num_docs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of documents to be queried</p></li>
-<li><p><strong>target</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – Dictionary which stores the data paths</p></li>
-<li><p><strong>with_groundtruth</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – True if want to include labels into query data</p></li>
-</ul>
-</dd>
-<dt class="field-even">Yields</dt>
-<dd class="field-even"><p>query data</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.print_result">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">print_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#print_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.print_result" title="Permalink to this definition">¶</a></dt>
-<dd><p>Callback function to receive results.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>resp</strong> – returned response with data</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.write_html">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">write_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#write_html"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.write_html" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to present results in browser.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>html_path</strong> – path of the written html</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.download_data">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download_proxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'download</span> <span class="pre">fashion-mnist'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#download_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.download_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Download data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>targets</strong> – target path for data.</p></li>
-<li><p><strong>download_proxy</strong> – download proxy (e.g. ‘http’, ‘https’)</p></li>
-<li><p><strong>task_name</strong> – name of the task</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.load_mnist">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">load_mnist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#load_mnist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.load_mnist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load MNIST data</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> – path of data</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>MNIST data in np.array</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="jina.helloworld.fashion.helper.load_labels">
-<span class="sig-prename descclassname"><span class="pre">jina.helloworld.fashion.helper.</span></span><span class="sig-name descname"><span class="pre">load_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/helloworld/fashion/helper/#load_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.helloworld.fashion.helper.load_labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load labels from path</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path of labels</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>labels in np.array</p>
-</dd>
-</dl>
-</dd></dl>
+                <section id="jina-helloworld-fashion-helper-module">
+<h1>jina.helloworld.fashion.helper module<a class="headerlink" href="#jina-helloworld-fashion-helper-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -897,7 +804,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

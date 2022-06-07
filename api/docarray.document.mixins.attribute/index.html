@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.document.mixins.audio module" href="../docarray.document.mixins.audio/" /><link rel="prev" title="docarray.document.mixins package" href="../docarray.document.mixins/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.document.mixins.attribute module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,72 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.document.mixins.attribute">
-<span id="docarray-document-mixins-attribute-module"></span><h1>docarray.document.mixins.attribute module<a class="headerlink" href="#module-docarray.document.mixins.attribute" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.document.mixins.attribute.GetSetAttributeMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.mixins.attribute.</span></span><span class="sig-name descname"><span class="pre">GetSetAttributeMixin</span></span><a class="reference internal" href="../../_modules/docarray/document/mixins/attribute/#GetSetAttributeMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.attribute.GetSetAttributeMixin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Provide helper functions for <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> to allow advanced set and get attributes</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.document.mixins.attribute.GetSetAttributeMixin.get_attributes">
-<span class="sig-name descname"><span class="pre">get_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">fields</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/attribute/#GetSetAttributeMixin.get_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.attribute.GetSetAttributeMixin.get_attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bulk fetch Document fields and return a list of the values of these fields</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Arguments will be extracted using <cite>dunder_get</cite>
-.. highlight:: python
-.. code-block:: python</p>
-<blockquote>
-<div><p>d = Document({‘id’: ‘123’, ‘hello’: ‘world’, ‘tags’: {‘id’: ‘external_id’, ‘good’: ‘bye’}})</p>
-<p>assert d.id == ‘123’  # true
-assert d.tags[‘hello’] == ‘world’ # true
-assert d.tags[‘good’] == ‘bye’ # true
-assert d.tags[‘id’] == ‘external_id’ # true</p>
-<p>res = d.get_attrs_values(<a href="#id1"><span class="problematic" id="id2">*</span></a>[‘id’, ‘tags__hello’, ‘tags__good’, ‘tags__id’])</p>
-<p>assert res == [‘123’, ‘world’, ‘bye’, ‘external_id’]</p>
-</div></blockquote>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>fields</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the variable length values to extract from the document</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a list with the attributes of this document ordered as the args</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.document.mixins.attribute.GetSetAttributeMixin.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/attribute/#GetSetAttributeMixin.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.attribute.GetSetAttributeMixin.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates fields specified in <code class="docutils literal notranslate"><span class="pre">fields</span></code> from the source to current Document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>~T</em>) – The <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> we want to update from as source. The current
-<code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> is referred as destination.</p></li>
-<li><p><strong>fields</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – a list of field names that we want to update, if not specified,
-use all present fields in source.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><a href="#id3"><span class="problematic" id="id4">*</span></a>. if <code class="docutils literal notranslate"><span class="pre">fields</span></code> are empty, then all present fields in source will be merged into current document.
-* <cite>tags</cite> will be updated like a python <code class="xref py py-attr docutils literal notranslate"><span class="pre">dict</span></code>.
-<a href="#id5"><span class="problematic" id="id6">*</span></a>. the current <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> will be modified in place, <code class="docutils literal notranslate"><span class="pre">source</span></code> will be unchanged.
-<a href="#id7"><span class="problematic" id="id8">*</span></a>. if current document has more fields than <code class="xref py py-attr docutils literal notranslate"><span class="pre">source</span></code>, these extra fields wll be preserved.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-document-mixins-attribute-module">
+<h1>docarray.document.mixins.attribute module<a class="headerlink" href="#docarray-document-mixins-attribute-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -868,7 +804,7 @@ use all present fields in source.</p></li>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

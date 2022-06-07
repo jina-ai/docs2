@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.math.helper module" href="../docarray.math.helper/" /><link rel="prev" title="docarray.math.dimensionality_reduction module" href="../docarray.math.dimensionality_reduction/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.math.evaluation module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,188 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.math.evaluation">
-<span id="docarray-math-evaluation-module"></span><h1>docarray.math.evaluation module<a class="headerlink" href="#module-docarray.math.evaluation" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.r_precision">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">r_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#r_precision"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.r_precision" title="Permalink to this definition">¶</a></dt>
-<dd><p>R Precision after all relevant documents have been retrieved
-Relevance is binary (nonzero is relevant).</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval">https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval</a>)#R-precision</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>precision</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.precision_at_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">precision_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#precision_at_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.precision_at_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Precision @K.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – measured on top-k</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>precision @k</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.hit_at_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">hit_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#hit_at_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.hit_at_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is percentage of first relevant item in list that occur</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – measured on top-k</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>hit @k if hit return 1 else 0</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.average_precision">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">average_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#average_precision"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.average_precision" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is average precision (area under PR curve)
-Relevance is binary (nonzero is relevant).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Average precision</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.reciprocal_rank">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">reciprocal_rank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#reciprocal_rank"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.reciprocal_rank" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is reciprocal of the rank of the first relevant item</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Average precision</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.recall_at_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">recall_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#recall_at_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.recall_at_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is recall after all relevant documents have been retrieved
-Relevance is binary (nonzero is relevant).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – measured on top-k</p></li>
-<li><p><strong>max_rel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of documents that can be relevant</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Recall score</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.f1_score_at_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">f1_score_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_relevance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#f1_score_at_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.f1_score_at_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is harmonic mean of precision and recall
-Relevance is binary (nonzero is relevant).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>binary_relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – binary relevancy in rank order</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – measured on top-k</p></li>
-<li><p><strong>max_rel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of documents that can be relevant</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>F1 score @ k</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.dcg_at_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">dcg_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relevance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#dcg_at_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.dcg_at_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is discounted cumulative gain (dcg)
-Relevance is positive real values. Can use binary
-as the previous methods.</p>
-<p>Example from
-<a class="reference external" href="http://www.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf">http://www.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Relevance scores (list or numpy) in rank order
-(first element is the first item)</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – measured on top-k</p></li>
-<li><p><strong>method</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – If 0 then weights are [1.0, 1.0, 0.6309, 0.5, 0.4307, …]
-If 1 then weights are [1.0, 0.6309, 0.5, 0.4307, …]</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Discounted cumulative gain</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="docarray.math.evaluation.ndcg_at_k">
-<span class="sig-prename descclassname"><span class="pre">docarray.math.evaluation.</span></span><span class="sig-name descname"><span class="pre">ndcg_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relevance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/math/evaluation/#ndcg_at_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.math.evaluation.ndcg_at_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>Score is normalized discounted cumulative gain (ndcg)
-Relevance is positive real values.  Can use binary
-as the previous methods.</p>
-<p>Example from
-<a class="reference external" href="http://www.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf">http://www.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>relevance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Relevance scores (list or numpy) in rank order
-(first element is the first item)</p></li>
-<li><p><strong>k</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – measured on top-k</p></li>
-<li><p><strong>method</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – If 0 then weights are [1.0, 1.0, 0.6309, 0.5, 0.4307, …]
-If 1 then weights are [1.0, 0.6309, 0.5, 0.4307, …]</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Normalized discounted cumulative gain</p>
-</dd>
-</dl>
-</dd></dl>
+                <section id="docarray-math-evaluation-module">
+<h1>docarray.math.evaluation module<a class="headerlink" href="#docarray-math-evaluation-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -984,7 +804,7 @@ If 1 then weights are [1.0, 0.6309, 0.5, 0.4307, …]</p></li>
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

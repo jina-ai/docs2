@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="jina.executors package" href="../jina.executors/" /><link rel="prev" title="jina.clients.mixin module" href="../jina.clients.mixin/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>jina.clients.websocket module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,28 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-jina.clients.websocket">
-<span id="jina-clients-websocket-module"></span><h1>jina.clients.websocket module<a class="headerlink" href="#module-jina.clients.websocket" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.clients.websocket.WebSocketClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.clients.websocket.</span></span><span class="sig-name descname"><span class="pre">WebSocketClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/clients/websocket/#WebSocketClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.clients.websocket.WebSocketClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../jina.clients.base.websocket/#jina.clients.base.websocket.WebSocketBaseClient" title="jina.clients.base.websocket.WebSocketBaseClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.clients.base.websocket.WebSocketBaseClient</span></code></a>, <a class="reference internal" href="../jina.clients.mixin/#jina.clients.mixin.PostMixin" title="jina.clients.mixin.PostMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.clients.mixin.PostMixin</span></code></a></p>
-<p>A client communicates the server with WebSocket protocol.</p>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="jina.clients.websocket.AsyncWebSocketClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jina.clients.websocket.</span></span><span class="sig-name descname"><span class="pre">AsyncWebSocketClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jina/clients/websocket/#AsyncWebSocketClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jina.clients.websocket.AsyncWebSocketClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../jina.clients.base.websocket/#jina.clients.base.websocket.WebSocketBaseClient" title="jina.clients.base.websocket.WebSocketBaseClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.clients.base.websocket.WebSocketBaseClient</span></code></a>, <a class="reference internal" href="../jina.clients.mixin/#jina.clients.mixin.AsyncPostMixin" title="jina.clients.mixin.AsyncPostMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">jina.clients.mixin.AsyncPostMixin</span></code></a></p>
-<p>A client communicates the server with WebSocket protocol.</p>
-<p>Unlike <a class="reference internal" href="#jina.clients.websocket.WebSocketClient" title="jina.clients.websocket.WebSocketClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSocketClient</span></code></a>, here <code class="xref py py-meth docutils literal notranslate"><span class="pre">post()</span></code> is a coroutine (i.e. declared with the async/await syntax),
-simply calling them will not schedule them to be executed.</p>
-<p>To actually run a coroutine, user need to put them in an event loop, e.g. via <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code>,
-<code class="docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code>.</p>
-<p><a class="reference internal" href="#jina.clients.websocket.AsyncWebSocketClient" title="jina.clients.websocket.AsyncWebSocketClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncWebSocketClient</span></code></a> can be very useful in
-the integration settings, where Jina/Flow/Client is NOT the main logic, but rather served as a part of other program.
-In this case, users often do not want to let Jina control the <code class="docutils literal notranslate"><span class="pre">asyncio.eventloop</span></code>. On contrary, <code class="xref py py-class docutils literal notranslate"><span class="pre">Client</span></code>
-is controlling and wrapping the event loop internally, making the Client looks synchronous from outside.</p>
-</dd></dl>
+                <section id="jina-clients-websocket-module">
+<h1>jina.clients.websocket module<a class="headerlink" href="#jina-clients-websocket-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -824,7 +804,7 @@ is controlling and wrapping the event loop internally, making the Client looks s
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

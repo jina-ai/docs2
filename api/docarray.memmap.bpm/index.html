@@ -36,13 +36,13 @@
 <script async defer src="https://cdn.jsdelivr.net/npm/qabot@0.2"></script>
     <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="docarray.ndarray package" href="../docarray.ndarray/" /><link rel="prev" title="docarray.memmap package" href="../docarray.memmap/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2021.10.09"/>
         <title>docarray.memmap.bpm module - Jina 2.6.4-master documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -768,63 +768,8 @@
                         </i>
                     </label>
                 </div>
-                <section id="module-docarray.memmap.bpm">
-<span id="docarray-memmap-bpm-module"></span><h1>docarray.memmap.bpm module<a class="headerlink" href="#module-docarray.memmap.bpm" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="docarray.memmap.bpm.BufferPoolManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.memmap.bpm.</span></span><span class="sig-name descname"><span class="pre">BufferPoolManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/memmap/bpm/#BufferPoolManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.memmap.bpm.BufferPoolManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Create a buffer pool manager that maps hot <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> s of a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayMemmap</span></code> to a memory buffer.</p>
-<p>This helps keep access to memory-loaded <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> instances synced with <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayMemmap</span></code> values.
-The memory buffer has a fixed size and uses an LRU strategy to empty spots when full.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.memmap.bpm.BufferPoolManager.add_or_update">
-<span class="sig-name descname"><span class="pre">add_or_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/memmap/bpm/#BufferPoolManager.add_or_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.memmap.bpm.BufferPoolManager.add_or_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds a document to the buffer pool or updates it if it already exists</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>idx</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – index</p></li>
-<li><p><strong>doc</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><em>Document</em></a>) – document</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>returns a couple of ID and <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> if there’s a document to persist</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.memmap.bpm.BufferPoolManager.delete_if_exists">
-<span class="sig-name descname"><span class="pre">delete_if_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/memmap/bpm/#BufferPoolManager.delete_if_exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.memmap.bpm.BufferPoolManager.delete_if_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds a document to the buffer pool or updates it if it already exists</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> – document key</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.memmap.bpm.BufferPoolManager.docs_to_flush">
-<span class="sig-name descname"><span class="pre">docs_to_flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/memmap/bpm/#BufferPoolManager.docs_to_flush"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.memmap.bpm.BufferPoolManager.docs_to_flush" title="Permalink to this definition">¶</a></dt>
-<dd><p>Persists the updated documents in disk</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>returns a list of documents to be flushed</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="docarray.memmap.bpm.BufferPoolManager.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/memmap/bpm/#BufferPoolManager.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.memmap.bpm.BufferPoolManager.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clears the memory buffer</p>
-</dd></dl>
-</dd></dl>
+                <section id="docarray-memmap-bpm-module">
+<h1>docarray.memmap.bpm module<a class="headerlink" href="#docarray-memmap-bpm-module" title="Permalink to this headline">¶</a></h1>
 </section>
 
             </article>
@@ -859,7 +804,7 @@ The memory buffer has a fixed size and uses an LRU strategy to empty spots when 
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Mar 11, 2022.
+                    Last updated on Jun 07, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/jina/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
